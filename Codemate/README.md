@@ -1,83 +1,70 @@
-# CodeAcademy
+# Getting Started with Create React App
 
-## Overview
-CodeAcademy is a web application designed to help users learn programming languages, practice coding, and take quizzes. It provides a platform for both learning and assessment.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-### Home Page
-![Home Page](public/logo/home.png)
+## Available Scripts
 
-### Course Page
-![Course Page](public/logo/course.png)
+In the project directory, you can run:
 
-### Quiz Page
-![Quiz Page](public/logo/quiz.png)
+### `npm start`
 
-### Problem Set Page
-![Problem Set Page](public/logo/problems.png)
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### Add Problem Form
-![Add Problem Form](public/logo/addproblem.png)
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-## Features
+### `npm test`
 
-### For Users:
-- **Learning:** Users can access resources to learn various programming languages.
-- **Practice:** Users can practice coding problems provided by the platform.
-- **Quizzes:** Users can take quizzes to test their knowledge.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### For Admins:
-- **Static Page Management:** Admins can add static pages for educational content.
-- **Problem Set Management:** Admins can add coding problems for users to practice.
+### `npm run build`
 
-## How It Works
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-### Learning:
-- Users can access tutorials, articles, and guides on different programming languages.
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-### Practice:
-- Users can solve coding problems provided by the platform.
-- They can submit their solutions and receive feedback.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### Quizzes:
-- Users can take quizzes on different programming topics.
-- Quizzes are automatically graded, and users receive instant feedback.
+### `npm run eject`
 
-### Admin Panel:
-- Admins have access to features for managing static pages and problem sets.
-- They can add new content and update existing ones.
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-### Request Handling:
-- The application handles requests using `app.get` and `app.post` methods in `app.js`.
-- When a user interacts with the application, whether by accessing a page or submitting a form, the corresponding route in `app.js` is triggered to process the request.
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-### Database Connection:
-- The application establishes a connection to the database in `db.js`.
-- This file contains the necessary configuration to connect to the MySQL database where user data, problem sets, and other information are stored.
-- By separating the database connection logic into a separate file, the application follows the principles of modularity and separation of concerns.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-## Installation
-1. Clone the repository.
-2. Install dependencies using `npm install`.
-3. Set up the database connection in `db.js`.
-4. Run the application using `node app.js`.
-5. Change dataase password and name from db.js
-6. import datbase from databse_tables  to mysql workbench
-7. Run app.js file
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Technologies Used
-- Node.js
-- Express.js
-- MySQL
-- HTML
-- CSS
-- JavaScript
-- EJS
-- CodeMirror
-- Quill.js
+## Learn More
 
-## Contributors / Team Members
-- Vipul Lakum
-- Yash Gabani
-- Meet Thakkar
-- Meet Antala
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
