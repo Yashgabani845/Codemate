@@ -1,0 +1,71 @@
+.card {
+    box-shadow: 0 4px 8px 0 rgb(0, 0, 0);
+    border-radius: 10px;
+    transition: 0.3s;
+    width: 320px;
+    height: 400px;
+    margin-right: 50px;
+    padding: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color:#d8d8d8;
+
+}
+.card1 {
+    box-shadow: 0 4px 8px 0 rgb(0, 0, 0);
+    border-radius: 10px;
+    transition: 0.3s;
+    width: 300px;
+    height: 200px;
+    margin-right: 50px;
+    padding: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color:#d8d8d8;
+
+}
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgb(0, 0, 0);
+  }
+  
+  .container {
+    padding: 2px 8px;
+    background-color:dimgray;
+    color: beige;
+    text-align: center;
+  }
+  
+  .card-img {
+    width: 70%;
+    height: 50%;
+  }
+  
+  .card-info {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .info-line {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .enroll-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .enroll-btn:hover {
+    background-color: #0056b3;
+  }
+  

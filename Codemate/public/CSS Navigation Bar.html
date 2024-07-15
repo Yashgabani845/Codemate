@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+        <link rel="stylesheet" href="../codemirror-5.65.16/lib/codemirror.css">
+        <script src="../codemirror-5.65.16/mode/python/python.js"></script>
+        <script src="../codemirror-5.65.16/lib/codemirror.js"></script>
+        <script src="../codemirror-5.65.16/mode/clike/clike.js"></script>
+        <link rel="stylesheet" href="../codemirror-5.65.16/theme/seti.css">
+        <link rel="icon" type="image/png" href="logo/fav.jpeg">
+        <script src="../codemirror-5.65.16/addon/edit/closebrackets.js"></script>
+    </head>
+    <body>
+        <div class="container" style=" height: fit-content;">
+        <h1 style="font-size: 42px; font-family: Segoe UI,Arial,sans-serif;font-weight: 400;">CSS Navigation Bar</h1>
+        <div clas="desc" style="height: fit-content; width:fit-content;font-family: Segoe UI,Arial,sans-serif;font-weight: 400;"><h2>Navigation Bars</h2><p>Having easy-to-use navigation is important for any web site.</p><p>With CSS you can transform boring HTML menus into good-looking navigation bars.</p><h2>Navigation Bar = List of Links</h2><p>A navigation bar needs standard HTML as a base.</p><p>In our examples we will build the navigation bar from a standard HTML list.</p><p>A navigation bar is basically a list of links, so using the &lt;ul&gt; and &lt;li&gt; elements makes perfect sense:</p><h3><br></h3><p><span style="color: mediumblue;">&lt;</span><span style="color: brown;">ul</span><span style="color: mediumblue;">&gt;</span></p><p>&nbsp;&nbsp;<span style="color: mediumblue;">&lt;</span><span style="color: brown;">li</span><span style="color: mediumblue;">&gt;&lt;</span><span style="color: brown;">a</span><span style="color: red;">&nbsp;href</span><span style="color: mediumblue;">="default.asp"&gt;</span>Home<span style="color: mediumblue;">&lt;</span><span style="color: brown;">/a</span><span style="color: mediumblue;">&gt;&lt;</span><span style="color: brown;">/li</span><span style="color: mediumblue;">&gt;</span></p><p>&nbsp;&nbsp;<span style="color: mediumblue;">&lt;</span><span style="color: brown;">li</span><span style="color: mediumblue;">&gt;&lt;</span><span style="color: brown;">a</span><span style="color: red;">&nbsp;href</span><span style="color: mediumblue;">="news.asp"&gt;</span>News<span style="color: mediumblue;">&lt;</span><span style="color: brown;">/a</span><span style="color: mediumblue;">&gt;&lt;</span><span style="color: brown;">/li</span><span style="color: mediumblue;">&gt;</span></p><p>&nbsp;&nbsp;<span style="color: mediumblue;">&lt;</span><span style="color: brown;">li</span><span style="color: mediumblue;">&gt;&lt;</span><span style="color: brown;">a</span><span style="color: red;">&nbsp;href</span><span style="color: mediumblue;">="contact.asp"&gt;</span>Contact<span style="color: mediumblue;">&lt;</span><span style="color: brown;">/a</span><span style="color: mediumblue;">&gt;&lt;</span><span style="color: brown;">/li</span><span style="color: mediumblue;">&gt;</span></p><p>&nbsp;&nbsp;<span style="color: mediumblue;">&lt;</span><span style="color: brown;">li</span><span style="color: mediumblue;">&gt;&lt;</span><span style="color: brown;">a</span><span style="color: red;">&nbsp;href</span><span style="color: mediumblue;">="about.asp"&gt;</span>About<span style="color: mediumblue;">&lt;</span><span style="color: brown;">/a</span><span style="color: mediumblue;">&gt;&lt;</span><span style="color: brown;">/li</span><span style="color: mediumblue;">&gt;</span></p><p><span style="color: mediumblue;">&lt;</span><span style="color: brown;">/ul</span><span style="color: mediumblue;">&gt;</span></p><p><br></p><p>Now let's remove the bullets and the margins and padding from the list:</p><h3><br></h3><p><span style="color: brown;">ul&nbsp;</span><span style="color: black;">{</span></p><p><span style="color: red;">&nbsp;&nbsp;list-style-type</span><span style="color: black;">:</span><span style="color: mediumblue;">&nbsp;none</span><span style="color: black;">;</span></p><p><span style="color: red;">&nbsp;margin</span><span style="color: black;">:</span><span style="color: mediumblue;">&nbsp;0</span><span style="color: black;">;</span></p><p><span style="color: red;">&nbsp;padding</span><span style="color: black;">:</span><span style="color: mediumblue;">&nbsp;0</span><span style="color: black;">;</span></p><p><span style="color: black;">}</span></p><p><br></p><p>Example explained:</p><ul><li><code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">list-style-type: none;</code>&nbsp;- Removes the bullets. A navigation bar does not need list markers</li><li>Set&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">margin: 0;</code>&nbsp;and&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">padding: 0;</code>&nbsp;to remove browser default settings</li></ul><p>The code in the example above is the standard code used in both vertical, and horizontal navigation bars, which you will learn more about in the next chapters</p><p>.<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZsAAAB7CAMAAACVdd38AAAAilBMVEX///80OkDZ2tsgKDD4+fqztrowNz84PkQfJy75+foxNz3Bw8UsMjkdJS0nLjX7/Px3fYJUWF1dYmZpbXFARUvr7O3Q0dK+wMGanJ5kaGyur7GAg4ZtcXWJjI/z9PXIyssAER2OkZNPU1hHTFGjpaeTmJ1yeH4MGiTk5ueio6V9f4EVHyieoaPd3+HXY0l0AAAEfUlEQVR4nO3YC3eaPBwGcC4yfEMMJGBCwiXjUtta+f5f741oW7faup3ZzbM9v3MqEXJqm8ckf/B8uFXen/4D/lnkXc89kM0FhH65Nup+Lf0Sv8unh49GNpckiytr76hP8zZNF4t0cfqSHlppWx3CQTYfoxvv6tqYhIm3+O89abCaPxvZfIxmn5ONTd+fWMjmx9xENoSxlwLBZ89H5p9D6ecNxo25hWxYbgx/Doepw+DTO3UuHFpV34dDff9sXuTcyZNLxbFJTrsXHw/Xb/WcTfrN6KbtdbJJ229CWbfnsqGV0bkm4ZL6LGRLyRgNQ8bsV+IObvowunJziC1DQpYh65rQnQhP/gMVFoa56UQdN9L0eaxrrfcFOzkp549XeuHatNr3LLZCzL2ocC8kfpP8H3TMRlp7Orrr6CrZpF2k0n115h1eR+u9zYYUasVWjFjZPRkZfZX3yUbJrmmNsDK6j0yZBUqFXaB8HVjRVBu1DeTrEFK5GpRflWTTdQ2nuuvnCAiv3dhzXYh46AUfNB/E4Yq75M4KVnEXR7FZVoPgRPNGFEL72e1lc+cmyoNt18m0tu1k2zFZXyGbde15i8Qskt1aqTZKTLlr32bDo9VW1eUjl7XlKreqi62bJ8nXJH4yQmpiwyIopLgrbV0nW2VXltOT/WnadpHpuRnrQJje5Mk8qUjOCdGCVlnMdVZkvZ8NlX/8RJ25MKp9l6IROmNZUbHKBdXE29vLph1la6adF4xSTkm6Ng+/MHNe543UU2QezbqMtutuWhhbyvRNNoO8j6tdNO66xpa7QrpFLTcdS5b2Pqway3r19KR4UO74dLfLqodsScqoeAmHyvsiUnFhRmG50Uk/HOdNTmnOWTZnE1NRN8VxM3HZVFT0Fat7UmRs2LB6nw2rh+oWs/E8I8e2NQ+jDKx0a9qvrGqv+43n6TJ6CLooqlq99kY5vs3GZ0bVUblN8qwP6uZJ6qCvasXsvSk3cuVWL9l0kx9k21iVG941crutTf6SDTGs2LnTRcdN37GxOZYVRGjtazEUdc7zWAju2sf9vo65ELQWtZsqOSHuGqmpFlpkcf1BBfG7HbNJbOJFdh1ZNU1ppFrb2gsB/FA2nVsbO/PQlXbXuoRUEAVvs/HZpmziMCs142XFNmGum3Jwo0WrcmAbt1OXeUKLsqO0KwvOSaPL7KSGc01GXBlAiTv47GW5m7f4ww/xv3mS93J+bh/ezD3oR8Xdb/e5NbSr+NK5Bky9Q0GQpufubyjb18HuHoe4hhsfMhdc+3sZ4t7SphofGZn70P040rn997uF+5sLiO7qfyKL7/2RbKafe2ZD/qFnAaeISC8P9k+a9vv7YQU7y7OHW0c8T7uAZtGV7Z+/kNgk73ougJHNJTS8svm5JWHLd4XHYgjZ3C7v2t8KuBovgFt19SIEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD7d/9NLgz3atLqOAAAAAElFTkSuQmCC" data-deferred="1" class="rg_i Q4LuWd" jsname="Q4LuWd" width="411" height="124" alt="How to display black navigation bar in Bootstrap ? - GeeksforGeeks" data-iml="1051.2000000029802" data-atf="false"></p><p><br></p></div>
+        <div class="codesec">
+            <h1 style="font-size: 42px; font-family: Segoe UI,Arial,sans-serif;font-weight: 400;">Example</h1>
+    
+            <textarea type="text" id="editor" class="form-control" aria-label="First name">ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color on hover */
+li a:hover {
+  background-color: #555;
+  color: white;
+}</textarea>
+        </div>
+        <script>
+            var editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
+                mode: "text/x-c++src",
+                theme: "seti",
+                lineNumbers: true,
+                autoCloseBrackets: true,
+        
+            })
+            var width = window.innerWidth
+            editor.setSize(0.7 * width, "300")
+           
+        </script>
+        
+    </div>
+    </body>
+    </html>

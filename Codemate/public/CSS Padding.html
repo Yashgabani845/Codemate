@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+        <link rel="stylesheet" href="../codemirror-5.65.16/lib/codemirror.css">
+        <script src="../codemirror-5.65.16/mode/python/python.js"></script>
+        <script src="../codemirror-5.65.16/lib/codemirror.js"></script>
+        <script src="../codemirror-5.65.16/mode/clike/clike.js"></script>
+        <link rel="stylesheet" href="../codemirror-5.65.16/theme/seti.css">
+        <link rel="icon" type="image/png" href="logo/fav.jpeg">
+        <script src="../codemirror-5.65.16/addon/edit/closebrackets.js"></script>
+    </head>
+    <body>
+        <div class="container" style=" height: fit-content;">
+        <h1 style="font-size: 42px; font-family: Segoe UI,Arial,sans-serif;font-weight: 400;">CSS Padding</h1>
+        <div clas="desc" style="height: fit-content; width:fit-content;font-family: Segoe UI,Arial,sans-serif;font-weight: 400;"><p>Padding is used to create space around an element's content, inside of any defined borders.</p><p><br></p><p>This element has a padding of 70px.</p><p><br></p><h2>CSS Padding</h2><p>The CSS&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">padding</code>&nbsp;properties are used to generate space around an element's content, inside of any defined borders.</p><p>With CSS, you have full control over the padding. There are properties for setting the padding for each side of an element (top, right, bottom, and left).</p><h2>Padding - Individual Sides</h2><p>CSS has properties for specifying the padding for each side of an element:</p><ul><li><code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">padding-top</code></li><li><code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">padding-right</code></li><li><code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">padding-bottom</code></li><li><code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">padding-left</code></li></ul><p>All the padding properties can have the following values:</p><ul><li><em>length</em>&nbsp;- specifies a padding in px, pt, cm, etc.</li><li><em>%</em>&nbsp;- specifies a padding in % of the width of the containing element</li><li>inherit - specifies that the padding should be inherited from the parent element</li></ul><p><strong>Note:</strong>&nbsp;Negative values are not allowed.</p><p><br></p><h2>Padding - Shorthand Property</h2><p>To shorten the code, it is possible to specify all the padding properties in one property.</p><p>The&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">padding</code>&nbsp;property is a shorthand property for the following individual padding properties:</p><ul><li><code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">padding-top</code></li><li><code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">padding-right</code></li><li><code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">padding-bottom</code></li><li><code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">padding-left</code></li></ul><p>So, here is how it works:</p><p>If the&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">padding</code>&nbsp;property has four values:</p><ul><li><strong>padding: 25px 50px 75px 100px;</strong></li><li class="ql-indent-1">top padding is 25px</li><li class="ql-indent-1">right padding is 50px</li><li class="ql-indent-1">bottom padding is 75px</li><li class="ql-indent-1">left padding is 100px</li></ul><p><br></p><p>If the&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">padding</code>&nbsp;property has three values:</p><ul><li><strong>padding: 25px 50px 75px;</strong></li><li class="ql-indent-1">top padding is 25px</li><li class="ql-indent-1">right and left paddings are 50px</li><li class="ql-indent-1">bottom padding is 75px</li></ul><p><br></p><p>If the&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">padding</code>&nbsp;property has two values:</p><ul><li><strong>padding: 25px 50px;</strong></li><li class="ql-indent-1">top and bottom paddings are 25px</li><li class="ql-indent-1">right and left paddings are 50px</li></ul><p><br></p><h2>Padding and Element Width</h2><p>The CSS&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">width</code>&nbsp;property specifies the width of the element's content area. The content area is the portion inside the padding, border, and margin of an element (<a href="https://www.w3schools.com/css/css_boxmodel.asp" target="_blank" style="color: inherit; background-color: transparent;">the box model</a>).</p><p>So, if an element has a specified width, the padding added to that element will be added to the total width of the element. This is often an undesirable result.</p><p><br></p></div>
+        <div class="codesec">
+            <h1 style="font-size: 42px; font-family: Segoe UI,Arial,sans-serif;font-weight: 400;">Example</h1>
+    
+            <textarea type="text" id="editor" class="form-control" aria-label="First name">div {
+  width: 300px;
+  padding: 25px;
+  box-sizing: border-box;
+}</textarea>
+        </div>
+        <script>
+            var editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
+                mode: "text/x-c++src",
+                theme: "seti",
+                lineNumbers: true,
+                autoCloseBrackets: true,
+        
+            })
+            var width = window.innerWidth
+            editor.setSize(0.7 * width, "300")
+           
+        </script>
+        
+    </div>
+    </body>
+    </html>

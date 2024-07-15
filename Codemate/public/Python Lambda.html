@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+        <link rel="stylesheet" href="../codemirror-5.65.16/lib/codemirror.css">
+        <script src="../codemirror-5.65.16/mode/python/python.js"></script>
+        <script src="../codemirror-5.65.16/lib/codemirror.js"></script>
+        <script src="../codemirror-5.65.16/mode/clike/clike.js"></script>
+        <link rel="stylesheet" href="../codemirror-5.65.16/theme/seti.css">
+        <link rel="icon" type="image/png" href="logo/fav.jpeg">
+        <script src="../codemirror-5.65.16/addon/edit/closebrackets.js"></script>
+    </head>
+    <body>
+        <div class="container" style=" height: fit-content;">
+        <h1 style="font-size: 42px; font-family: Segoe UI,Arial,sans-serif;font-weight: 400;">Python Lambda</h1>
+        <div clas="desc" style="height: fit-content; width:fit-content;"><p>A lambda function is a small anonymous function.</p><p>A lambda function can take any number of arguments, but can only have one expression.</p><h2>Syntax</h2><p>lambda&nbsp;<em>arguments&nbsp;</em>:&nbsp;<em>expression</em></p><p>The expression is executed and the result is returned:</p><h3>Example</h3><h3><br></h3><p>Add 10 to argument&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">a</code>, and return the result:</p><p>x =&nbsp;<span style="color: mediumblue;">lambda</span>&nbsp;a : a +&nbsp;<span style="color: red;">10</span></p><p><span style="color: mediumblue;">print</span>(x(<span style="color: red;">5</span>))</p><p><br></p><p>Lambda functions can take any number of arguments:</p><h3>Example</h3><p>Multiply argument&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">a</code>&nbsp;with argument&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">b</code>&nbsp;and return the result:</p><p>x =&nbsp;<span style="color: mediumblue;">lambda</span>&nbsp;a, b : a * b</p><p><span style="color: mediumblue;">print</span>(x(<span style="color: red;">5</span>,&nbsp;<span style="color: red;">6</span>))</p><p><br></p><h3>Example</h3><p>Summarize argument&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">a</code>,&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">b</code>, and&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">c</code>&nbsp;and return the result:</p><p>x =&nbsp;<span style="color: mediumblue;">lambda</span>&nbsp;a, b, c : a + b + c</p><p><span style="color: mediumblue;">print</span>(x(<span style="color: red;">5</span>,&nbsp;<span style="color: red;">6</span>,&nbsp;<span style="color: red;">2</span>))</p><p><br></p><h2>Why Use Lambda Functions?</h2><p>The power of lambda is better shown when you use them as an anonymous function inside another function.</p><p>Say you have a function definition that takes one argument, and that argument will be multiplied with an unknown number:</p><p><span style="color: mediumblue;">def</span>&nbsp;myfunc(n):</p><p>&nbsp;&nbsp;<span style="color: mediumblue;">return</span>&nbsp;<span style="color: mediumblue;">lambda</span>&nbsp;a : a * n</p><p>Use that function definition to make a function that always doubles the number you send in:</p><h3>Example</h3><p><span style="color: mediumblue;">def</span>&nbsp;myfunc(n):</p><p>&nbsp;&nbsp;<span style="color: mediumblue;">return</span>&nbsp;<span style="color: mediumblue;">lambda</span>&nbsp;a : a * n</p><p><br></p><p>mydoubler = myfunc(<span style="color: red;">2</span>)</p><p><br></p><p><span style="color: mediumblue;">print</span>(mydoubler(<span style="color: red;">11</span>))</p><p><br></p><p>Or, use the same function definition to make a function that always&nbsp;<em>triples</em>&nbsp;the number you send in:</p><h3>Example</h3><p><span style="color: mediumblue;">def</span>&nbsp;myfunc(n):</p><p>&nbsp;&nbsp;<span style="color: mediumblue;">return</span>&nbsp;<span style="color: mediumblue;">lambda</span>&nbsp;a : a * n</p><p><br></p><p>mytripler = myfunc(<span style="color: red;">3</span>)</p><p><br></p><p><span style="color: mediumblue;">print</span>(mytripler(<span style="color: red;">11</span>))</p><p><br></p><p>Or, use the same function definition to make both functions, in the same program:</p><h3>Example</h3><p><span style="color: mediumblue;">def</span>&nbsp;myfunc(n):</p><p>&nbsp;&nbsp;<span style="color: mediumblue;">return</span>&nbsp;<span style="color: mediumblue;">lambda</span>&nbsp;a : a * n</p><p><br></p><p>mydoubler = myfunc(<span style="color: red;">2</span>)</p><p>mytripler = myfunc(<span style="color: red;">3</span>)</p><p><br></p><p><span style="color: mediumblue;">print</span>(mydoubler(<span style="color: red;">11</span>))</p><p><span style="color: mediumblue;">print</span>(mytripler(<span style="color: red;">11</span>))</p><p><br></p><p>Use lambda functions when an anonymous function is required for a short period of time.</p></div>
+        <div class="codesec">
+            <h1 style="font-size: 42px; font-family: Segoe UI,Arial,sans-serif;font-weight: 400;">Example</h1>
+    
+            <textarea type="text" id="editor" class="form-control" aria-label="First name"># Add 10 to argument a, and return the result:
+x = lambda a: a + 10
+print(x(5))
+
+# Multiply argument a with argument b and return the result:
+x = lambda a, b: a * b
+print(x(5, 6))
+
+# Summarize argument a, b, and c and return the result:
+x = lambda a, b, c: a + b + c
+print(x(5, 6, 2))
+
+# Define a function that returns a lambda function to double the input:
+def myfunc(n):
+    return lambda a: a * n
+
+# Use the function to create a function that doubles the input:
+mydoubler = myfunc(2)
+print(mydoubler(11))
+
+# Use the function to create a function that triples the input:
+mytripler = myfunc(3)
+print(mytripler(11))
+
+# Create both functions using the same function definition:
+mydoubler = myfunc(2)
+mytripler = myfunc(3)
+print(mydoubler(11))
+print(mytripler(11))
+</textarea>
+        </div>
+        <script>
+            var editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
+                mode: "text/x-c++src",
+                theme: "seti",
+                lineNumbers: true,
+                autoCloseBrackets: true,
+        
+            })
+            var width = window.innerWidth
+            editor.setSize(0.7 * width, "300")
+           
+        </script>
+        
+    </div>
+    </body>
+    </html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+        <link rel="stylesheet" href="../codemirror-5.65.16/lib/codemirror.css">
+        <script src="../codemirror-5.65.16/mode/python/python.js"></script>
+        <script src="../codemirror-5.65.16/lib/codemirror.js"></script>
+        <script src="../codemirror-5.65.16/mode/clike/clike.js"></script>
+        <link rel="stylesheet" href="../codemirror-5.65.16/theme/seti.css">
+        <link rel="icon" type="image/png" href="logo/fav.jpeg">
+        <script src="../codemirror-5.65.16/addon/edit/closebrackets.js"></script>
+    </head>
+    <body>
+        <div class="container" style=" height: fit-content;">
+        <h1 style="font-size: 42px; font-family: Segoe UI,Arial,sans-serif;font-weight: 400;">Python Math</h1>
+        <div clas="desc" style="height: fit-content; width:fit-content;"><p>Python has a set of built-in math functions, including an extensive math module, that allows you to perform mathematical tasks on numbers.</p><p><br></p><h2>Built-in Math Functions</h2><p><br></p><p>The&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">min()</code>&nbsp;and&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">max()</code>&nbsp;functions can be used to find the lowest or highest value in an iterable:</p><h3>Example</h3><h3><br></h3><p>x =&nbsp;<span style="color: mediumblue;">min</span>(<span style="color: red;">5</span>,&nbsp;<span style="color: red;">10</span>,&nbsp;<span style="color: red;">25</span>)</p><p>y =&nbsp;<span style="color: mediumblue;">max</span>(<span style="color: red;">5</span>,&nbsp;<span style="color: red;">10</span>,&nbsp;<span style="color: red;">25</span>)</p><p><br></p><p><span style="color: mediumblue;">print</span>(x)</p><p><span style="color: mediumblue;">print</span>(y)</p><p><br></p><p>The&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">abs()</code>&nbsp;function returns the absolute (positive) value of the specified number:</p><h3>Example</h3><p>x =&nbsp;<span style="color: mediumblue;">abs</span>(-<span style="color: red;">7.25</span>)</p><p><br></p><p><span style="color: mediumblue;">print</span>(x)</p><p><br></p><p>The&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">pow(<em>x</em>,&nbsp;<em>y</em>)</code>&nbsp;function returns the value of x to the power of y (xy).</p><h3>Example</h3><p>Return the value of 4 to the power of 3 (same as 4 * 4 * 4):</p><p>x =&nbsp;<span style="color: mediumblue;">pow</span>(<span style="color: red;">4</span>,&nbsp;<span style="color: red;">3</span>)</p><p><br></p><p><span style="color: mediumblue;">print</span>(x)</p><p><br></p><h2>The Math Module</h2><p>Python has also a built-in module called&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">math</code>, which extends the list of mathematical functions.</p><p>To use it, you must import the&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">math</code>&nbsp;module:</p><p><span style="color: mediumblue;">import</span>&nbsp;math</p><p>When you have imported the&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">math</code>&nbsp;module, you can start using methods and constants of the module.</p><p>The&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">math.sqrt()</code>&nbsp;method for example, returns the square root of a number:</p><h3>Example</h3><p><span style="color: mediumblue;">import</span>&nbsp;math</p><p><br></p><p>x = math.sqrt(<span style="color: red;">64</span>)</p><p><br></p><p><span style="color: mediumblue;">print</span>(x)</p><p><br></p><p>The&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">math.ceil()</code>&nbsp;method rounds a number upwards to its nearest integer, and the&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">math.floor()</code>&nbsp;method rounds a number downwards to its nearest integer, and returns the result:</p><h3>Example</h3><p><span style="color: mediumblue;">import</span>&nbsp;math</p><p><br></p><p>x = math.ceil(<span style="color: red;">1.4</span>)</p><p>y = math.floor(<span style="color: red;">1.4</span>)</p><p><br></p><p><span style="color: mediumblue;">print</span>(x)&nbsp;<span style="color: green;"># returns 2</span></p><p><span style="color: mediumblue;">print</span>(y)&nbsp;<span style="color: green;"># returns 1</span></p><p><br></p><p>The&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">math.pi</code>&nbsp;constant, returns the value of PI (3.14...):</p><h3>Example</h3><p><span style="color: mediumblue;">import</span>&nbsp;math</p><p><br></p><p>x = math.pi</p><p><span style="color: mediumblue;">print</span>(x)</p></div>
+        <div class="codesec">
+            <h1 style="font-size: 42px; font-family: Segoe UI,Arial,sans-serif;font-weight: 400;">Example</h1>
+    
+            <textarea type="text" id="editor" class="form-control" aria-label="First name">import math
+
+# Example: Using min() and max() functions
+x = min(5, 10, 25)
+y = max(5, 10, 25)
+print(x)  # Output: 5
+print(y)  # Output: 25
+
+# Example: Using abs() function
+x = abs(-7.25)
+print(x)  # Output: 7.25
+
+# Example: Using pow() function
+x = pow(4, 3)
+print(x)  # Output: 64
+
+# Example: Using math.sqrt() method
+x = math.sqrt(64)
+print(x)  # Output: 8.0
+
+# Example: Using math.ceil() and math.floor() methods
+x = math.ceil(1.4)
+y = math.floor(1.4)
+print(x)  # Output: 2
+print(y)  # Output: 1
+
+# Example: Using math.pi constant
+x = math.pi
+print(x)  # Output: 3.141592653589793
+</textarea>
+        </div>
+        <script>
+            var editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
+                mode: "text/x-c++src",
+                theme: "seti",
+                lineNumbers: true,
+                autoCloseBrackets: true,
+        
+            })
+            var width = window.innerWidth
+            editor.setSize(0.7 * width, "300")
+           
+        </script>
+        
+    </div>
+    </body>
+    </html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Language Quiz</title>
+    <link rel="stylesheet" href="/css/quiz_style.css">
+    <link rel="icon" type="image/png" href="logo/fav.jpeg">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Python Language Quiz</h1>
+        <div id="quiz"></div>
+        <button id="nextButton">Next Question</button>
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        const questions = [
+            {
+                question: "1. Which of the following is not a valid data type in Python?",
+                options: ["int", "char", "float", "string"],
+                answer: "char"
+            },
+            {
+                question: "2. What is the output of the following code?\n\nx = 5\ny = 2\nprint(x ** y)",
+                options: ["10", "25", "7", "Error"],
+                answer: "25"
+            },
+            {
+                question: "3. How do you create a comment in Python?",
+                options: ["//This is a comment", "# This is a comment", "// This is a comment", "/* This is a comment */"],
+                answer: "# This is a comment"
+            },
+            {
+                question: "4. What is the correct way to create a function in Python?",
+                options: ["def myFunction():", "function myFunction():", "function myFunction{}", "def myFunction{}:"],
+                answer: "def myFunction():"
+            },
+            {
+                question: "5. What is the output of the following code?\n\nx = 'Hello'\nprint(len(x))",
+                options: ["5", "6", "Error", "Undefined"],
+                answer: "5"
+            },
+            {
+                question: "6. What is the output of the following code?\n\nx = 'Hello'\nprint(x[0])",
+                options: ["H", "e", "Error", "Undefined"],
+                answer: "H"
+            },
+            {
+                question: "7. How do you start a loop in Python?",
+                options: ["for loop:", "for loop()", "for loop in:", "for loop() in:"],
+                answer: "for loop in:"
+            },
+            {
+                question: "8. What is the output of the following code?\n\nfor x in range(5):\n  print(x)",
+                options: ["0 1 2 3 4", "1 2 3 4 5", "0 1 2 3", "1 2 3 4"],
+                answer: "0 1 2 3 4"
+            },
+            {
+                question: "9. Which of the following is not a valid comparison operator in Python?",
+                options: ["==", "<>", ">=", "<="],
+                answer: "<>"
+            },
+            {
+                question: "10. What is the output of the following code?\n\nx = True\ny = False\nprint(x and y)",
+                options: ["True", "False", "Error", "Undefined"],
+                answer: "False"
+            },
+            {
+                question: "11. What is the output of the following code?\n\nx = True\ny = False\nprint(x or y)",
+                options: ["True", "False", "Error", "Undefined"],
+                answer: "True"
+            },
+            {
+                question: "12. How do you define a list in Python?",
+                options: ["(1, 2, 3)", "[1, 2, 3]", "{1, 2, 3}", "1 2 3"],
+                answer: "[1, 2, 3]"
+            },
+            {
+                question: "13. What is the output of the following code?\n\nx = [1, 2, 3]\nprint(x[1])",
+                options: ["1", "2", "3", "Error"],
+                answer: "2"
+            },
+            {
+                question: "14. What is the output of the following code?\n\nx = [1, 2, 3]\nprint(len(x))",
+                options: ["1", "2", "3", "Error"],
+                answer: "3"
+            },
+            {
+                question: "15. How do you add an element to a list in Python?",
+                options: ["append()", "add()", "insert()", "push()"],
+                answer: "append()"
+            },
+            {
+                question: "16. What is the output of the following code?\n\nx = [1, 2, 3]\nx.append(4)\nprint(x)",
+                options: ["[1, 2, 3]", "[1, 2, 3, 4]", "[1, 2, 4, 3]", "[4, 1, 2, 3]"],
+                answer: "[1, 2, 3, 4]"
+            },
+            {
+                question: "17. What is the output of the following code?\n\nx = [1, 2, 3]\nx.remove(2)\nprint(x)",
+                options: ["[1, 2, 3]", "[1, 3]", "[2, 3]", "[1, 2]"],
+                answer: "[1, 3]"
+            },
+            {
+                question: "18. What is the output of the following code?\n\nx = [1, 2, 3]\nx.pop()\nprint(x)",
+                options: ["[1, 2, 3]", "[1, 2]", "[2, 3]", "[3, 2, 1]"],
+                answer: "[1, 2]"
+            },
+            {
+                question: "19. How do you define a tuple in Python?",
+                options: ["(1, 2, 3)", "[1, 2, 3]", "{1, 2, 3}", "1 2 3"],
+                answer: "(1, 2, 3)"
+            },
+            {
+                question: "20. What is the output of the following code?\n\nx = (1, 2, 3)\nprint(x[1])",
+                options: ["1", "2", "3", "Error"],
+                answer: "2"
+            },
+            {
+                question: "21. What is the output of the following code?\n\nx = (1, 2, 3)\nprint(len(x))",
+                options: ["1", "2", "3", "Error"],
+                answer: "3"
+            },
+            {
+                question: "22. How do you add an element to a tuple in Python?",
+                options: ["append()", "add()", "insert()", "Tuples are immutable"],
+                answer: "Tuples are immutable"
+            },
+            {
+                question: "23. What is the output of the following code?\n\nx = (1, 2, 3)\nx.remove(2)\nprint(x)",
+                options: ["(1, 2, 3)", "(1, 3)", "(2, 3)", "Error"],
+                answer: "Error"
+            },
+            {
+                question: "24. What is the output of the following code?\n\nx = (1, 2, 3)\nx.pop()\nprint(x)",
+                options: ["(1, 2, 3)", "(1, 2)", "(2, 3)", "Error"],
+                answer: "Error"
+            },
+            {
+                question: "25. What is the output of the following code?\n\nx = {'a': 1, 'b': 2, 'c': 3}\nprint(x['b'])",
+                options: ["1", "2", "3", "Error"],
+                answer: "2"
+            }
+        ];
+
+        let currentQuestionIndex = 0;
+        let score = 0;
+
+        function showQuestion(questionIndex) {
+            const currentQuestion = questions[questionIndex];
+            const quizElement = document.getElementById("quiz");
+            quizElement.innerHTML = `
+        <div class="question">
+            <p>${currentQuestion.question}</p>
+            <div class="options">
+                ${currentQuestion.options.map((option, index) => `
+                    <label><input type="radio" name="answer" value="${option}"> ${option}</label>
+                `).join('')}
+            </div>
+        </div>
+    `;
+        }
+
+        function showResult() {
+            const resultElement = document.getElementById("result");
+            resultElement.innerHTML = `Your score is: ${score}`;
+        }
+
+        function checkAnswer() {
+            const selectedAnswer = document.querySelector('input[name="answer"]:checked');
+            if (selectedAnswer) {
+                const userAnswer = selectedAnswer.value;
+                const correctAnswer = questions[currentQuestionIndex].answer;
+                if (userAnswer === correctAnswer) {
+                    score++;
+                }
+                currentQuestionIndex++;
+                if (currentQuestionIndex < questions.length) {
+                    showQuestion(currentQuestionIndex);
+                } else {
+                    showResult();
+                    document.getElementById("nextButton").disabled = true;
+                }
+            } else {
+                alert("Please select an answer.");
+            }
+        }
+
+        document.getElementById("nextButton").addEventListener("click", checkAnswer);
+
+        showQuestion(currentQuestionIndex);
+    </script>
+
+</body>
+
+</html>

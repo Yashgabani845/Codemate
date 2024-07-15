@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+        <link rel="stylesheet" href="../codemirror-5.65.16/lib/codemirror.css">
+        <script src="../codemirror-5.65.16/mode/python/python.js"></script>
+        <script src="../codemirror-5.65.16/lib/codemirror.js"></script>
+        <script src="../codemirror-5.65.16/mode/clike/clike.js"></script>
+        <link rel="stylesheet" href="../codemirror-5.65.16/theme/seti.css">
+        <script src="../codemirror-5.65.16/addon/edit/closebrackets.js"></script>
+        <link rel="icon" type="image/png" href="logo/fav.jpeg">
+    </head>
+    <body>
+        <div class="container" style=" height: fit-content;">
+        <h1 style="font-size: 42px; font-family: Segoe UI,Arial,sans-serif;font-weight: 400;">Python If ... Else</h1>
+        <div clas="desc" style="height: fit-content; width:fit-content;"><h2>Python Conditions and If statements</h2><p>Python supports the usual logical conditions from mathematics:</p><ul><li>Equals:&nbsp;<span style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">a == b</span></li><li>Not Equals:&nbsp;<span style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">a != b</span></li><li>Less than:&nbsp;<span style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">a &lt; b</span></li><li>Less than or equal to:&nbsp;<span style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">a &lt;= b</span></li><li>Greater than:&nbsp;<span style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">a &gt; b</span></li><li>Greater than or equal to:&nbsp;<span style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">a &gt;= b</span></li></ul><p>These conditions can be used in several ways, most commonly in "if statements" and loops.</p><p>An "if statement" is written by using the&nbsp;<span style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">if</span>&nbsp;keyword.</p><h3>Example</h3><h3><br></h3><p>If statement:</p><p>a =&nbsp;<span style="color: red;">33</span></p><p>b =&nbsp;<span style="color: red;">200</span></p><p><span style="color: mediumblue;">if</span>&nbsp;b &gt; a:</p><p>&nbsp;&nbsp;<span style="color: mediumblue;">print</span>(<span style="color: brown;">"b is greater than a"</span>)</p><p><br></p><p>In this example we use two variables,&nbsp;<span style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">a</span>&nbsp;and&nbsp;<span style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">b</span>, which are used as part of the if statement to test whether&nbsp;<span style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">b</span>&nbsp;is greater than&nbsp;<span style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">a</span>. As&nbsp;<span style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">a</span>&nbsp;is&nbsp;<span style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">33</span>, and&nbsp;<span style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">b</span>&nbsp;is&nbsp;<span style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">200</span>, we know that 200 is greater than 33, and so we print to screen that "b is greater than a".</p><h2>Indentation</h2><p>Python relies on indentation (whitespace at the beginning of a line) to define scope in the code. Other programming languages often use curly-brackets for this purpose.</p><h3>Example</h3><p>If statement, without indentation (will raise an error):</p><p>a =&nbsp;<span style="color: red;">33</span></p><p>b =&nbsp;<span style="color: red;">200</span></p><p><span style="color: mediumblue;">if</span>&nbsp;b &gt; a:</p><p><span style="color: mediumblue;">print</span>(<span style="color: brown;">"b is greater than a"</span>)&nbsp;<span style="color: green;"># you will get an error</span></p><h2><br></h2><h2>Elif</h2><p>The&nbsp;<span style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">elif</span>&nbsp;keyword is Python's way of saying "if the previous conditions were not true, then try this condition".</p><h3>Example</h3><p>a =&nbsp;<span style="color: red;">33</span></p><p>b =&nbsp;<span style="color: red;">33</span></p><p><span style="color: mediumblue;">if</span>&nbsp;b &gt; a:</p><p>&nbsp;&nbsp;<span style="color: mediumblue;">print</span>(<span style="color: brown;">"b is greater than a"</span>)</p><p><span style="color: mediumblue;">elif</span>&nbsp;a == b:</p><p>&nbsp;&nbsp;<span style="color: mediumblue;">print</span>(<span style="color: brown;">"a and b are equal"</span>)</p><p><br></p><p>In this example&nbsp;<span style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">a</span>&nbsp;is equal to&nbsp;<span style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">b</span>, so the first condition is not true, but the&nbsp;<span style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">elif</span>&nbsp;condition is true, so we print to screen that "a and b are equal".</p><h2>Else</h2><p>The&nbsp;<span style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">else</span>&nbsp;keyword catches anything which isn't caught by the preceding conditions.</p><h3>Example</h3><p>a =&nbsp;<span style="color: red;">200</span></p><p>b =&nbsp;<span style="color: red;">33</span></p><p><span style="color: mediumblue;">if</span>&nbsp;b &gt; a:</p><p>&nbsp;&nbsp;<span style="color: mediumblue;">print</span>(<span style="color: brown;">"b is greater than a"</span>)</p><p><span style="color: mediumblue;">elif</span>&nbsp;a == b:</p><p>&nbsp;&nbsp;<span style="color: mediumblue;">print</span>(<span style="color: brown;">"a and b are equal"</span>)</p><p><span style="color: mediumblue;">else</span>:</p><p>&nbsp;&nbsp;<span style="color: mediumblue;">print</span>(<span style="color: brown;">"a is greater than b"</span>)</p><p><br></p><p>In this example&nbsp;<span style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">a</span>&nbsp;is greater than&nbsp;<span style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">b</span>, so the first condition is not true, also the&nbsp;<span style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">elif</span>&nbsp;condition is not true, so we go to the&nbsp;<span style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">else</span>&nbsp;condition and print to screen that "a is greater than b".</p><p>You can also have an&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">else</code>&nbsp;without the&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">elif</code>:</p><h3>Example</h3><p>a =&nbsp;<span style="color: red;">200</span></p><p>b =&nbsp;<span style="color: red;">33</span></p><p><span style="color: mediumblue;">if</span>&nbsp;b &gt; a:</p><p>&nbsp;&nbsp;<span style="color: mediumblue;">print</span>(<span style="color: brown;">"b is greater than a"</span>)</p><p><span style="color: mediumblue;">else</span>:</p><p>&nbsp;&nbsp;<span style="color: mediumblue;">print</span>(<span style="color: brown;">"b is not greater than a"</span>)</p><h2><br></h2><h2>Short Hand If</h2><p>If you have only one statement to execute, you can put it on the same line as the if statement.</p><h3>Example</h3><p>One line if statement:</p><p><span style="color: mediumblue;">if</span>&nbsp;a &gt; b:&nbsp;<span style="color: mediumblue;">print</span>(<span style="color: brown;">"a is greater than b"</span>)</p><h2><br></h2><h2>Short Hand If ... Else</h2><p>If you have only one statement to execute, one for if, and one for else, you can put it all on the same line:</p><h3>Example</h3><p>One line if else statement:</p><p>a =&nbsp;<span style="color: red;">2</span></p><p>b =&nbsp;<span style="color: red;">330</span></p><p><span style="color: mediumblue;">print</span>(<span style="color: brown;">"A"</span>)&nbsp;<span style="color: mediumblue;">if</span>&nbsp;a &gt; b&nbsp;<span style="color: mediumblue;">else</span>&nbsp;<span style="color: mediumblue;">print</span>(<span style="color: brown;">"B"</span>)</p><p><br></p><p>This technique is known as&nbsp;<strong>Ternary Operators</strong>, or&nbsp;<strong>Conditional Expressions</strong>.</p><p>You can also have multiple else statements on the same line:</p><h3>Example</h3><p>One line if else statement, with 3 conditions:</p><p>a =&nbsp;<span style="color: red;">330</span></p><p>b =&nbsp;<span style="color: red;">330</span></p><p><span style="color: mediumblue;">print</span>(<span style="color: brown;">"A"</span>)&nbsp;<span style="color: mediumblue;">if</span>&nbsp;a &gt; b&nbsp;<span style="color: mediumblue;">else</span>&nbsp;<span style="color: mediumblue;">print</span>(<span style="color: brown;">"="</span>)&nbsp;<span style="color: mediumblue;">if</span>&nbsp;a == b&nbsp;<span style="color: mediumblue;">else</span>&nbsp;<span style="color: mediumblue;">print</span>(<span style="color: brown;">"B"</span>)</p><h2><br></h2><h2>And</h2><p>The&nbsp;<span style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">and</span>&nbsp;keyword is a logical operator, and is used to combine conditional statements:</p><h3>Example</h3><p>Test if&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">a</code>&nbsp;is greater than&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">b</code>, AND if&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">c</code>&nbsp;is greater than&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">a</code>:</p><p>a =&nbsp;<span style="color: red;">200</span></p><p>b =&nbsp;<span style="color: red;">33</span></p><p>c =&nbsp;<span style="color: red;">500</span></p><p><span style="color: mediumblue;">if</span>&nbsp;a &gt; b and c &gt; a:</p><p>&nbsp;&nbsp;<span style="color: mediumblue;">print</span>(<span style="color: brown;">"Both conditions are True"</span>)</p><h2><br></h2><h2>Or</h2><p>The&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">or</code>&nbsp;keyword is a logical operator, and is used to combine conditional statements:</p><h3>Example</h3><p>Test if&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">a</code>&nbsp;is greater than&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">b</code>, OR if&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">a</code>&nbsp;is greater than&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">c</code>:</p><p>a =&nbsp;<span style="color: red;">200</span></p><p>b =&nbsp;<span style="color: red;">33</span></p><p>c =&nbsp;<span style="color: red;">500</span></p><p><span style="color: mediumblue;">if</span>&nbsp;a &gt; b or a &gt; c:</p><p>&nbsp;&nbsp;<span style="color: mediumblue;">print</span>(<span style="color: brown;">"At least one of the conditions is True"</span>)</p><h2>Not</h2><p>The&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">not</code>&nbsp;keyword is a logical operator, and is used to reverse the result of the conditional statement:</p><h3>Example</h3><p>Test if&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">a</code>&nbsp;is NOT greater than&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">b</code>:</p><p>a =&nbsp;<span style="color: red;">33</span></p><p>b =&nbsp;<span style="color: red;">200</span></p><p><span style="color: mediumblue;">if</span>&nbsp;not a &gt; b:</p><p>&nbsp;&nbsp;<span style="color: mediumblue;">print</span>(<span style="color: brown;">"a is NOT greater than b"</span>)</p><h2>Nested If</h2><p>You can have&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">if</code>&nbsp;statements inside&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">if</code>&nbsp;statements, this is called&nbsp;<em>nested</em>&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">if</code>&nbsp;statements.</p><h3>Example</h3><p>x =&nbsp;<span style="color: red;">41</span></p><p><br></p><p><span style="color: mediumblue;">if</span>&nbsp;x &gt;&nbsp;<span style="color: red;">10</span>:</p><p>&nbsp;&nbsp;<span style="color: mediumblue;">print</span>(<span style="color: brown;">"Above ten,"</span>)</p><p>&nbsp;&nbsp;<span style="color: mediumblue;">if</span>&nbsp;x &gt;&nbsp;<span style="color: red;">20</span>:</p><p>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: mediumblue;">print</span>(<span style="color: brown;">"and also above 20!"</span>)</p><p>&nbsp;&nbsp;<span style="color: mediumblue;">else</span>:</p><p>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: mediumblue;">print</span>(<span style="color: brown;">"but not above 20."</span>)</p><h2>The pass Statement</h2><p><code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">if</code>&nbsp;statements cannot be empty, but if you for some reason have an&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">if</code>&nbsp;statement with no content, put in the&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">pass</code>&nbsp;statement to avoid getting an error.</p><h3>Example</h3><p>a =&nbsp;<span style="color: red;">33</span></p><p>b =&nbsp;<span style="color: red;">200</span></p><p><br></p><p><span style="color: mediumblue;">if</span>&nbsp;b &gt; a:</p></div>
+        <div class="codesec">
+            <h1 style="font-size: 42px; font-family: Segoe UI,Arial,sans-serif;font-weight: 400;">Example</h1>
+    
+            <textarea type="text" id="editor" class="form-control" aria-label="First name"># If statement:
+a = 33
+b = 200
+if b > a:
+    print("b is greater than a")
+
+# Elif statement:
+a = 33
+b = 33
+if b > a:
+    print("b is greater than a")
+elif a == b:
+    print("a and b are equal")
+
+# Else statement:
+a = 200
+b = 33
+if b > a:
+    print("b is greater than a")
+elif a == b:
+    print("a and b are equal")
+else:
+    print("a is greater than b")
+
+# Short Hand If:
+if a > b: print("a is greater than b")
+
+# Short Hand If...Else:
+a = 2
+b = 330
+print("A") if a > b else print("B")
+
+# Short Hand If...Else with 3 conditions:
+a = 330
+b = 330
+print("A") if a > b else print("=") if a == b else print("B")
+
+# And:
+a = 200
+b = 33
+c = 500
+if a > b and c > a:
+    print("Both conditions are True")
+
+# Or:
+if a > b or a > c:
+    print("At least one of the conditions is True")
+
+# Not:
+a = 33
+b = 200
+if not a > b:
+    print("a is NOT greater than b")
+
+# Nested If:
+x = 41
+if x > 10:
+    print("Above ten,")
+    if x > 20:
+        print("and also above 20!")
+    else:
+        print("but not above 20.")
+
+# The pass statement:
+a = 33
+b = 200
+if b > a:
+    pass
+</textarea>
+        </div>
+        <script>
+            var editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
+                mode: "text/x-c++src",
+                theme: "seti",
+                lineNumbers: true,
+                autoCloseBrackets: true,
+        
+            })
+            var width = window.innerWidth
+            editor.setSize(0.7 * width, "300")
+           
+        </script>
+        
+    </div>
+    </body>
+    </html>

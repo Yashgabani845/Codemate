@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+        <link rel="stylesheet" href="../codemirror-5.65.16/lib/codemirror.css">
+        <script src="../codemirror-5.65.16/mode/python/python.js"></script>
+        <script src="../codemirror-5.65.16/lib/codemirror.js"></script>
+        <script src="../codemirror-5.65.16/mode/clike/clike.js"></script>
+        <link rel="stylesheet" href="../codemirror-5.65.16/theme/seti.css">
+        <script src="../codemirror-5.65.16/addon/edit/closebrackets.js"></script>
+        <link rel="icon" type="image/png" href="logo/fav.jpeg">
+    </head>
+    <body>
+        <div class="container" style=" height: fit-content;">
+        <h1 style="font-size: 42px; font-family: Segoe UI,Arial,sans-serif;font-weight: 400;">Python Functions</h1>
+        <div clas="desc" style="height: fit-content; width:fit-content;"><p>A function is a block of code which only runs when it is called.</p><p>You can pass data, known as parameters, into a function.</p><p>A function can return data as a result.</p><h2>Creating a Function</h2><p>In Python a function is defined using the&nbsp;<span style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">def</span>&nbsp;keyword:</p><h3>Example</h3><h3><br></h3><p><span style="color: mediumblue;">def</span>&nbsp;my_function():</p><p>&nbsp;&nbsp;<span style="color: mediumblue;">print</span>(<span style="color: brown;">"Hello from a function"</span>)</p><h2>Calling a Function</h2><p>To call a function, use the function name followed by parenthesis:</p><h3>Example</h3><p><span style="color: mediumblue;">def</span>&nbsp;my_function():</p><p>&nbsp;&nbsp;<span style="color: mediumblue;">print</span>(<span style="color: brown;">"Hello from a function"</span>)</p><p><br></p><p><strong>my_function()</strong></p><p><br></p><h2>Arguments</h2><p>Information can be passed into functions as arguments.</p><p>Arguments are specified after the function name, inside the parentheses. You can add as many arguments as you want, just separate them with a comma.</p><p>The following example has a function with one argument (fname). When the function is called, we pass along a first name, which is used inside the function to print the full name:</p><h3>Example</h3><p><span style="color: mediumblue;">def</span>&nbsp;my_function(<strong>fname</strong>):</p><p>&nbsp;&nbsp;<span style="color: mediumblue;">print</span>(fname +&nbsp;<span style="color: brown;">" Refsnes"</span>)</p><p><br></p><p>my_function(<strong style="color: brown;">"Emil"</strong>)</p><p>my_function(<strong style="color: brown;">"Tobias"</strong>)</p><p>my_function(<strong style="color: brown;">"Linus"</strong>)</p><p><br></p><p><em>Arguments</em>&nbsp;are often shortened to&nbsp;<em>args</em>&nbsp;in Python documentations.</p><h2>Parameters or Arguments?</h2><p>The terms&nbsp;<em>parameter</em>&nbsp;and&nbsp;<em>argument</em>&nbsp;can be used for the same thing: information that are passed into a function.</p><p>From a function's perspective:</p><p>A parameter is the variable listed inside the parentheses in the function definition.</p><p>An argument is the value that is sent to the function when it is called.</p><h2>Number of Arguments</h2><p>By default, a function must be called with the correct number of arguments. Meaning that if your function expects 2 arguments, you have to call the function with 2 arguments, not more, and not less.</p><h3>Example</h3><p>This function expects 2 arguments, and gets 2 arguments:</p><p><span style="color: mediumblue;">def</span>&nbsp;my_function(fname, lname):</p><p>&nbsp;&nbsp;<span style="color: mediumblue;">print</span>(fname +&nbsp;<span style="color: brown;">" "</span>&nbsp;+ lname)</p><p><br></p><p>my_function(<span style="color: brown;">"Emil"</span>,&nbsp;<span style="color: brown;">"Refsnes"</span>)</p><p><br></p><p><span style="background-color: rgb(255, 255, 255);">If you try to call the function with 1 or 3 arguments, you will get an error:</span></p><h3>Example</h3><p>This function expects 2 arguments, but gets only 1:</p><p><span style="color: mediumblue;">def</span>&nbsp;my_function(fname, lname):</p><p>&nbsp;&nbsp;<span style="color: mediumblue;">print</span>(fname +&nbsp;<span style="color: brown;">" "</span>&nbsp;+ lname)</p><p><br></p><p>my_function(<span style="color: brown;">"Emil"</span>)</p><p><br></p><h2>Arbitrary Arguments, *args</h2><p>If you do not know how many arguments that will be passed into your function, add a&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">*</code>&nbsp;before the parameter name in the function definition.</p><p>This way the function will receive a&nbsp;<em>tuple</em>&nbsp;of arguments, and can access the items accordingly:</p><h3>Example</h3><p>If the number of arguments is unknown, add a&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">*</code>&nbsp;before the parameter name:</p><p><span style="color: mediumblue;">def</span>&nbsp;my_function(*kids):</p><p>&nbsp;&nbsp;<span style="color: mediumblue;">print</span>(<span style="color: brown;">"The youngest child is "</span>&nbsp;+ kids[<span style="color: red;">2</span>])</p><p><br></p><p>my_function(<span style="color: brown;">"Emil"</span>,&nbsp;<span style="color: brown;">"Tobias"</span>,&nbsp;<span style="color: brown;">"Linus"</span>)</p><p><br></p><p><em>Arbitrary Arguments</em>&nbsp;are often shortened to&nbsp;<em>*args</em>&nbsp;in Python documentations.</p><h2>Keyword Arguments</h2><p>You can also send arguments with the&nbsp;<em>key</em>&nbsp;=&nbsp;<em>value</em>&nbsp;syntax.</p><p>This way the order of the arguments does not matter.</p><h3>Example</h3><p><span style="color: mediumblue;">def</span>&nbsp;my_function(child3, child2, child1):</p><p>&nbsp;&nbsp;<span style="color: mediumblue;">print</span>(<span style="color: brown;">"The youngest child is "</span>&nbsp;+ child3)</p><p><br></p><p>my_function(child1 =&nbsp;<span style="color: brown;">"Emil"</span>, child2 =&nbsp;<span style="color: brown;">"Tobias"</span>, child3 =&nbsp;<span style="color: brown;">"Linus"</span>)</p><p><br></p><p>The phrase&nbsp;<em>Keyword Arguments</em>&nbsp;are often shortened to&nbsp;<em>kwargs</em>&nbsp;in Python documentations.</p><h2>Arbitrary Keyword Arguments, **kwargs</h2><p>If you do not know how many keyword arguments that will be passed into your function, add two asterisk:&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">**</code>&nbsp;before the parameter name in the function definition.</p><p>This way the function will receive a&nbsp;<em>dictionary</em>&nbsp;of arguments, and can access the items accordingly:</p><h3>Example</h3><p>If the number of keyword arguments is unknown, add a double&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">**</code>&nbsp;before the parameter name:</p><p><span style="color: mediumblue;">def</span>&nbsp;my_function(**kid):</p><p>&nbsp;&nbsp;<span style="color: mediumblue;">print</span>(<span style="color: brown;">"His last name is "</span>&nbsp;+ kid[<span style="color: brown;">"lname"</span>])</p><p><br></p><p>my_function(fname =&nbsp;<span style="color: brown;">"Tobias"</span>, lname =&nbsp;<span style="color: brown;">"Refsnes"</span>)</p><p><br></p><p><em>Arbitrary Kword Arguments</em>&nbsp;are often shortened to&nbsp;<em>**kwargs</em>&nbsp;in Python documentations.</p><h2>Default Parameter Value</h2><p>The following example shows how to use a default parameter value.</p><p>If we call the function without argument, it uses the default value:</p><h3>Example</h3><p><span style="color: mediumblue;">def</span>&nbsp;my_function(<strong>country =&nbsp;</strong><strong style="color: brown;">"Norway"</strong>):</p><p>&nbsp;&nbsp;<span style="color: mediumblue;">print</span>(<span style="color: brown;">"I am from "</span>&nbsp;+&nbsp;country)</p><p><br></p><p>my_function(<span style="color: brown;">"Sweden"</span>)</p><p>my_function(<span style="color: brown;">"India"</span>)</p><p>my_function()</p><p>my_function(<span style="color: brown;">"Brazil"</span>)</p><p><br></p><h2>Passing a List as an Argument</h2><p>You can send any data types of argument to a function (string, number, list, dictionary etc.), and it will be treated as the same data type inside the function.</p><p>E.g. if you send a List as an argument, it will still be a List when it reaches the function:</p><h3>Example</h3><p><span style="color: mediumblue;">def</span>&nbsp;my_function(food):</p><p>&nbsp;&nbsp;<span style="color: mediumblue;">for</span>&nbsp;x&nbsp;<span style="color: mediumblue;">in</span>&nbsp;food:</p><p>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: mediumblue;">print</span>(x)</p><p><br></p><p>fruits = [<span style="color: brown;">"apple"</span>,&nbsp;<span style="color: brown;">"banana"</span>,&nbsp;<span style="color: brown;">"cherry"</span>]</p><p><br></p><p>my_function(fruits)</p><p><br></p><h2>Return Values</h2><p>To let a function return a value, use the&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">return</code>&nbsp;statement:</p><h3>Example</h3><p><span style="color: mediumblue;">def</span>&nbsp;my_function(x):</p><p>&nbsp;&nbsp;<strong style="color: mediumblue;">return</strong><strong>&nbsp;</strong><strong style="color: red;">5</strong><strong>&nbsp;* x</strong></p><p><br></p><p><span style="color: mediumblue;">print</span>(my_function(<span style="color: red;">3</span>))</p><p><span style="color: mediumblue;">print</span>(my_function(<span style="color: red;">5</span>))</p><p><span style="color: mediumblue;">print</span>(my_function(<span style="color: red;">9</span>))</p><p><br></p><h2>The pass Statement</h2><p><code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">function</code>&nbsp;definitions cannot be empty, but if you for some reason have a&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">function</code>&nbsp;definition with no content, put in the&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">pass</code>&nbsp;statement to avoid getting an error.</p><h3>Example</h3><p><span style="color: mediumblue;">def</span>&nbsp;myfunction():</p><p>&nbsp;&nbsp;<span style="color: mediumblue;">pass</span></p><p><br></p><h2>Positional-Only Arguments</h2><p>You can specify that a function can have ONLY positional arguments, or ONLY keyword arguments.</p><p>To specify that a function can have only positional arguments, add&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">, /</code>&nbsp;after the arguments:</p><h3>Example</h3><p><span style="color: mediumblue;">def</span>&nbsp;my_function(x, /):</p><p>&nbsp;&nbsp;<span style="color: mediumblue;">print</span>(x)</p><p><br></p><p>my_function(<span style="color: red;">3</span>)</p><p><br></p><p>Without the&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">, /</code>&nbsp;you are actually allowed to use keyword arguments even if the function expects positional arguments:</p><h3>Example</h3><p><span style="color: mediumblue;">def</span>&nbsp;my_function(x):</p><p>&nbsp;&nbsp;<span style="color: mediumblue;">print</span>(x)</p><p><br></p><p>my_function(x =&nbsp;<span style="color: red;">3</span>)</p><p><br></p><p>But when adding the&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">, /</code>&nbsp;you will get an error if you try to send a keyword argument:</p><h3>Example</h3><p><span style="color: mediumblue;">def</span>&nbsp;my_function(x, /):</p><p>&nbsp;&nbsp;<span style="color: mediumblue;">print</span>(x)</p><p><br></p><p>my_function(x =&nbsp;<span style="color: red;">3</span>)</p><p><br></p><h2>Keyword-Only Arguments</h2><p>To specify that a function can have only keyword arguments, add&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">*,&nbsp;</code><em>before</em>&nbsp;the arguments:</p><h3>Example</h3><p><span style="color: mediumblue;">def</span>&nbsp;my_function(*, x):</p><p>&nbsp;&nbsp;<span style="color: mediumblue;">print</span>(x)</p><p><br></p><p>my_function(x =&nbsp;<span style="color: red;">3</span>)</p><p><br></p><p>Without the&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">*,&nbsp;</code>you are allowed to use positionale arguments even if the function expects keyword arguments:</p><h3>Example</h3><p><span style="color: mediumblue;">def</span>&nbsp;my_function(x):</p><p>&nbsp;&nbsp;<span style="color: mediumblue;">print</span>(x)</p><p><br></p><p>my_function(<span style="color: red;">3</span>)</p><p><br></p><p>But when adding the&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">*, /</code>&nbsp;you will get an error if you try to send a positional argument:</p><h3>Example</h3><p><span style="color: mediumblue;">def</span>&nbsp;my_function(*, x):</p><p>&nbsp;&nbsp;<span style="color: mediumblue;">print</span>(x)</p><p><br></p><p>my_function(<span style="color: red;">3</span>)</p><p><br></p><h2>Combine Positional-Only and Keyword-Only</h2><p>You can combine the two argument types in the same function.</p><p>Any argument&nbsp;<em>before</em>&nbsp;the&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">/ ,</code>&nbsp;are positional-only, and any argument&nbsp;<em>after</em>&nbsp;the&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">*,&nbsp;</code>are keyword-only.</p><h3>Example</h3><p><span style="color: mediumblue;">def</span>&nbsp;my_function(a, b, /, *, c, d):</p><p>&nbsp;&nbsp;<span style="color: mediumblue;">print</span>(a + b + c + d)</p><p><br></p><p>my_function(<span style="color: red;">5</span>,&nbsp;<span style="color: red;">6</span>, c =&nbsp;<span style="color: red;">7</span>, d =&nbsp;<span style="color: red;">8</span>)</p><p><br></p><h2>Recursion</h2><p>Python also accepts function recursion, which means a defined function can call itself.</p><p>Recursion is a common mathematical and programming concept. It means that a function calls itself. This has the benefit of meaning that you can loop through data to reach a result.</p><p>The developer should be very careful with recursion as it can be quite easy to slip into writing a function which never terminates, or one that uses excess amounts of memory or processor power. However, when written correctly recursion can be a very efficient and mathematically-elegant approach to programming.</p><p>In this example,&nbsp;<span style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">tri_recursion()</span>&nbsp;is a function that we have defined to call itself ("recurse"). We use the&nbsp;<span style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">k</span>&nbsp;variable as the data, which decrements (<span style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">-1</span>) every time we recurse. The recursion ends when the condition is not greater than 0 (i.e. when it is 0).</p><p>To a new developer it can take some time to work out how exactly this works, best way to find out is by testing and modifying it.</p><h3>Example</h3><p>Recursion Example</p><p>def tri_recursion(k):</p><p>&nbsp;&nbsp;<span style="color: mediumblue;">if</span>(k &gt;&nbsp;<span style="color: red;">0</span>):</p><p>&nbsp;&nbsp;&nbsp;result = k + tri_recursion(k -&nbsp;<span style="color: red;">1</span>)</p><p>&nbsp;&nbsp;&nbsp;print(result)</p><p>&nbsp;&nbsp;<span style="color: mediumblue;">else</span>:</p><p>&nbsp;&nbsp;&nbsp;result =&nbsp;<span style="color: red;">0</span></p><p>&nbsp;&nbsp;<span style="color: mediumblue;">return</span>&nbsp;result</p><p><br></p><p>print(<span style="color: brown;">"\n\nRecursion Example Results"</span>)</p><p>tri_recursion(<span style="color: red;">6</span>)</p></div>
+        <div class="codesec">
+            <h1 style="font-size: 42px; font-family: Segoe UI,Arial,sans-serif;font-weight: 400;">Example</h1>
+    
+            <textarea type="text" id="editor" class="form-control" aria-label="First name"># Creating a function
+def my_function():
+    print("Hello from a function")
+
+# Calling a function
+my_function()
+
+# Function with one argument
+def my_function(fname):
+    print(fname + " Refsnes")
+
+my_function("Emil")
+my_function("Tobias")
+my_function("Linus")
+
+# Function with default parameter value
+def my_function(country="Norway"):
+    print("I am from " + country)
+
+my_function("Sweden")
+my_function("India")
+my_function()
+my_function("Brazil")
+
+# Function with variable number of arguments
+def my_function(*kids):
+    print("The youngest child is " + kids[2])
+
+my_function("Emil", "Tobias", "Linus")
+
+# Function with keyword arguments
+def my_function(child3, child2, child1):
+    print("The youngest child is " + child3)
+
+my_function(child1="Emil", child2="Tobias", child3="Linus")
+
+# Function with arbitrary keyword arguments
+def my_function(**kid):
+    print("His last name is " + kid["lname"])
+
+my_function(fname="Tobias", lname="Refsnes")
+
+# Function that returns a value
+def my_function(x):
+    return 5 * x
+
+print(my_function(3))
+print(my_function(5))
+print(my_function(9))
+
+# Positional-Only Arguments
+def my_function(x, /):
+    print(x)
+
+my_function(3)
+
+# Keyword-Only Arguments
+def my_function(*, x):
+    print(x)
+
+my_function(x=3)
+
+# Recursion
+def tri_recursion(k):
+    if k > 0:
+        result = k + tri_recursion(k - 1)
+        print(result)
+    else:
+        result = 0
+    return result
+
+print("\n\nRecursion Example Results")
+tri_recursion(6)
+</textarea>
+        </div>
+        <script>
+            var editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
+                mode: "text/x-c++src",
+                theme: "seti",
+                lineNumbers: true,
+                autoCloseBrackets: true,
+        
+            })
+            var width = window.innerWidth
+            editor.setSize(0.7 * width, "300")
+           
+        </script>
+        
+    </div>
+    </body>
+    </html>

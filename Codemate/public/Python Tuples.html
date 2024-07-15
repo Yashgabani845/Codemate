@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+        <link rel="stylesheet" href="../codemirror-5.65.16/lib/codemirror.css">
+        <script src="../codemirror-5.65.16/mode/python/python.js"></script>
+        <script src="../codemirror-5.65.16/lib/codemirror.js"></script>
+        <script src="../codemirror-5.65.16/mode/clike/clike.js"></script>
+        <link rel="stylesheet" href="../codemirror-5.65.16/theme/seti.css">
+        <link rel="icon" type="image/png" href="logo/fav.jpeg">
+        <script src="../codemirror-5.65.16/addon/edit/closebrackets.js"></script>
+    </head>
+    <body>
+        <div class="container" style=" height: fit-content;">
+        <h1 style="font-size: 42px; font-family: Segoe UI,Arial,sans-serif;font-weight: 400;">Python Tuples</h1>
+        <div clas="desc" style="height: fit-content; width:fit-content;"><p>mytuple = (<span style="color: brown;">"apple"</span>,&nbsp;<span style="color: brown;">"banana"</span>,&nbsp;<span style="color: brown;">"cherry"</span>)</p><h2>Tuple</h2><p>Tuples are used to store multiple items in a single variable.</p><p>Tuple is one of 4 built-in data types in Python used to store collections of data, the other 3 are&nbsp;<a href="https://www.w3schools.com/python/python_lists.asp" target="_blank" style="color: inherit; background-color: transparent;">List</a>,&nbsp;<a href="https://www.w3schools.com/python/python_sets.asp" target="_blank" style="color: inherit; background-color: transparent;">Set</a>, and&nbsp;<a href="https://www.w3schools.com/python/python_dictionaries.asp" target="_blank" style="color: inherit; background-color: transparent;">Dictionary</a>, all with different qualities and usage.</p><p>A tuple is a collection which is ordered and&nbsp;<strong>unchangeable</strong>.</p><p>Tuples are written with round brackets.</p><h3>Example</h3><p>Create a Tuple:</p><p>thistuple = (<span style="color: brown;">"apple"</span>,&nbsp;<span style="color: brown;">"banana"</span>,&nbsp;<span style="color: brown;">"cherry"</span>)</p><p><span style="color: mediumblue;">print</span>(thistuple)</p><h2><br></h2><h2>Tuple Items</h2><p>Tuple items are ordered, unchangeable, and allow duplicate values.</p><p>Tuple items are indexed, the first item has index&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">[0]</code>, the second item has index&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">[1]</code>&nbsp;etc.</p><h2>Ordered</h2><p>When we say that tuples are ordered, it means that the items have a defined order, and that order will not change.</p><h2>Unchangeable</h2><p>Tuples are unchangeable, meaning that we cannot change, add or remove items after the tuple has been created.</p><h2>Allow Duplicates</h2><p>Since tuples are indexed, they can have items with the same value:</p><h3>Example</h3><p>Tuples allow duplicate values:</p><p>thistuple = (<span style="color: brown;">"apple"</span>,&nbsp;<span style="color: brown;">"banana"</span>,&nbsp;<span style="color: brown;">"cherry"</span>,&nbsp;<span style="color: brown;">"apple"</span>,&nbsp;<span style="color: brown;">"cherry"</span>)</p><p><span style="color: mediumblue;">print</span>(thistuple)</p><h2><br></h2><h2>Tuple Length</h2><p>To determine how many items a tuple has, use the&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">len()</code>&nbsp;function:</p><h3>Example</h3><p>Print the number of items in the tuple:</p><p>thistuple = (<span style="color: brown;">"apple"</span>,&nbsp;<span style="color: brown;">"banana"</span>,&nbsp;<span style="color: brown;">"cherry"</span>)</p><p><span style="color: mediumblue;">print</span>(<span style="color: mediumblue;">len</span>(thistuple))</p><h2><br></h2><h2>Create Tuple With One Item</h2><p>To create a tuple with only one item, you have to add a comma after the item, otherwise Python will not recognize it as a tuple.</p><h3>Example</h3><p>One item tuple, remember the comma:</p><p>thistuple = (<span style="color: brown;">"apple"</span>,)</p><p><span style="color: mediumblue;">print</span>(<span style="color: mediumblue;">type</span>(thistuple))</p><p><br></p><p><span style="color: green;">#NOT a tuple</span></p><p>thistuple = (<span style="color: brown;">"apple"</span>)</p><p><span style="color: mediumblue;">print</span>(<span style="color: mediumblue;">type</span>(thistuple))</p><h2><br></h2><h2>Tuple Items - Data Types</h2><p>Tuple items can be of any data type:</p><h3>Example</h3><p>String, int and boolean data types:</p><p>tuple1 = (<span style="color: brown;">"apple"</span>,&nbsp;<span style="color: brown;">"banana"</span>,&nbsp;<span style="color: brown;">"cherry"</span>)</p><p>tuple2 = (<span style="color: red;">1</span>,&nbsp;<span style="color: red;">5</span>,&nbsp;<span style="color: red;">7</span>,&nbsp;<span style="color: red;">9</span>,&nbsp;<span style="color: red;">3</span>)</p><p>tuple3 = (<span style="color: mediumblue;">True</span>,&nbsp;<span style="color: mediumblue;">False</span>,&nbsp;<span style="color: mediumblue;">False</span>)</p><p><br></p><p>A tuple can contain different data types:</p><h3>Example</h3><p>A tuple with strings, integers and boolean values:</p><p>tuple1 = (<span style="color: brown;">"abc"</span>,&nbsp;<span style="color: red;">34</span>,&nbsp;<span style="color: mediumblue;">True</span>,&nbsp;<span style="color: red;">40</span>,&nbsp;<span style="color: brown;">"male"</span>)</p><h2><br></h2><h2>type()</h2><p>From Python's perspective, tuples are defined as objects with the data type 'tuple':</p><p>&lt;class 'tuple'&gt;</p><h3>Example</h3><p>What is the data type of a tuple?</p><p>mytuple = (<span style="color: brown;">"apple"</span>,&nbsp;<span style="color: brown;">"banana"</span>,&nbsp;<span style="color: brown;">"cherry"</span>)</p><p><span style="color: mediumblue;">print</span>(<span style="color: mediumblue;">type</span>(mytuple))</p><h2><br></h2><h2>The tuple() Constructor</h2><p>It is also possible to use the&nbsp;<span style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">tuple()</span>&nbsp;constructor to make a tuple.</p><h3>Example</h3><p>Using the tuple() method to make a tuple:</p><p>thistuple = tuple((<span style="color: brown;">"apple"</span>,&nbsp;<span style="color: brown;">"banana"</span>,&nbsp;<span style="color: brown;">"cherry"</span>))&nbsp;<span style="color: green;"># note the double round-brackets</span></p><p><span style="color: mediumblue;">print</span>(thistuple)</p><p><br></p><h2>Python Collections (Arrays)</h2><p>There are four collection data types in the Python programming language:</p><ul><li><a href="https://www.w3schools.com/python/python_lists.asp" target="_blank" style="color: inherit; background-color: transparent;"><strong>List</strong></a>&nbsp;is a collection which is ordered and changeable. Allows duplicate members.</li><li><strong>Tuple</strong>&nbsp;is a collection which is ordered and unchangeable. Allows duplicate members.</li><li><a href="https://www.w3schools.com/python/python_sets.asp" target="_blank" style="color: inherit; background-color: transparent;"><strong>Set</strong></a>&nbsp;is a collection which is unordered, unchangeable*, and unindexed. No duplicate members.</li><li><a href="https://www.w3schools.com/python/python_dictionaries.asp" target="_blank" style="color: inherit; background-color: transparent;"><strong>Dictionary</strong></a>&nbsp;is a collection which is ordered** and changeable. No duplicate members.</li></ul><p>*Set&nbsp;<em>items</em>&nbsp;are unchangeable, but you can remove and/or add items whenever you like.</p><p>**As of Python version 3.7, dictionaries are&nbsp;<em>ordered</em>. In Python 3.6 and earlier, dictionaries are&nbsp;<em>unordered</em>.</p><p>When choosing a collection type, it is useful to understand the properties of that type. Choosing the right type for a particular data set could mean retention of meaning, and, it could mean an increase in efficiency or security.</p></div>
+        <div class="codesec">
+            <h1 style="font-size: 42px; font-family: Segoe UI,Arial,sans-serif;font-weight: 400;">Example</h1>
+    
+            <textarea type="text" id="editor" class="form-control" aria-label="First name"># Create a Tuple:
+thistuple = ("apple", "banana", "cherry")
+print(thistuple)
+
+# Tuples allow duplicate values:
+thistuple = ("apple", "banana", "cherry", "apple", "cherry")
+print(thistuple)
+
+# Print the number of items in the tuple:
+thistuple = ("apple", "banana", "cherry")
+print(len(thistuple))
+
+# One item tuple, remember the comma:
+thistuple = ("apple",)
+print(type(thistuple))
+
+# A tuple with strings, integers and boolean values:
+tuple1 = ("abc", 34, True, 40, "male")
+
+# What is the data type of a tuple?
+mytuple = ("apple", "banana", "cherry")
+print(type(mytuple))
+
+# Using the tuple() method to make a tuple:
+thistuple = tuple(("apple", "banana", "cherry")) # note the double round-brackets
+print(thistuple)
+</textarea>
+        </div>
+        <script>
+            var editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
+                mode: "text/x-c++src",
+                theme: "seti",
+                lineNumbers: true,
+                autoCloseBrackets: true,
+        
+            })
+            var width = window.innerWidth
+            editor.setSize(0.7 * width, "300")
+           
+        </script>
+        
+    </div>
+    </body>
+    </html>

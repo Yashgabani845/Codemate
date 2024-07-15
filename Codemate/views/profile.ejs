@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body {
+  background-color: #f0f0f0;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+.container {
+  width: 400px;
+  margin: 120px auto 120px;
+  background-color: #fff;
+  padding: 0 20px 20px;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.075);
+  -webkit-box-shadow: 0 2px 5px rgba(0,0,0,0.075);
+  -moz-box-shadow: 0 2px 5px rgba(0,0,0,0.075);
+  text-align: center;
+  justify-content: center;
+}
+
+.image {
+  border-radius: 100px;
+  overflow: hidden;
+  height: 150px;
+  width: 150px;
+  position: relative;
+  margin: auto;
+  top: -60px;
+  box-shadow: 0 0 0 13px #f0f0f0;
+  -webkit-box-shadow: 0 0 0 13px #f0f0f0;
+  -moz-box-shadow: 0 0 0 13px #f0f0f0;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+}
+h4 {
+  font-size: 13px;
+  color: #00baff;
+  letter-spacing: 1px;
+  margin-bottom: 25px
+}
+p {
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.logout-button {
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #ff6347;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #e74c3c;
+}
+
+.submissions {
+    display: block;
+    width: 60%;
+    padding: 10px 20px;
+    margin-left : 80px;
+    background-color: #279623;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submissions:hover {
+    background-color: #27751d;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+  <div class="image">
+    <img src="../Logo/linkedin.png" height="150" width="150">
+    
+  </div>
+  <h2><%= username %></h2><br><br><br>
+  <form action="/submissinos" method="GET">
+    <button type="submit" class="submissions">View My Submissions</button>
+</form>
+  <form action="/logout" method="GET">
+    <button type="submit" class="logout-button">Logout</button>
+</form>
+</div>
+</body>
+</html>

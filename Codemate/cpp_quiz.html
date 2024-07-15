@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Language Quiz</title>
+    <link rel="stylesheet" href="/css/quiz_style.css">
+    <link rel="icon" type="image/png" href="logo/fav.jpeg">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>C++ Language Quiz</h1>
+        <div id="quiz"></div>
+        <button id="nextButton">Next Question</button>
+        <div id="result" class="result"></div>
+    </div>
+    <button><a href="/">Home</a></button>
+    <style>
+        a {
+            color: azure;
+            text-decoration: none;
+        }
+    </style>
+    <script>
+        const questions = [
+            {
+                question: "1. What is the output of the following code?\n\n#include <iostream>\n\nint main() {\n    int x = 5;\n    std::cout << x++;\n    return 0;\n}",
+                options: ["5", "6", "Error", "Undefined"],
+                answer: "5"
+            },
+            {
+                question: "2. Which of the following correctly declares a pointer to an integer in C++?",
+                options: ["int *ptr;", "*int ptr;", "pointer ptr;", "ptr int;"],
+                answer: "int *ptr;"
+            },
+            {
+                question: "3. What is the correct way to define a class in C++?",
+                options: ["class MyClass {}", "class MyClass();", "MyClass class {}", "Class MyClass {}"],
+                answer: "class MyClass {}"
+            },
+            {
+                question: "4. What does the 'new' operator do in C++?",
+                options: ["Allocates memory", "Frees memory", "Creates a pointer", "Calls a constructor"],
+                answer: "Allocates memory"
+            },
+            {
+                question: "5. What is the output of the following code?\n\n#include <iostream>\n\nint main() {\n    int arr[5] = {1, 2, 3, 4, 5};\n    std::cout << arr[5];\n    return 0;\n}",
+                options: ["5", "0", "Error", "Undefined"],
+                answer: "Undefined"
+            },
+            {
+                question: "6. What is the output of the following code?\n\n#include <iostream>\n\nint main() {\n    int x = 10;\n    int *ptr = &x;\n    std::cout << *ptr;\n    return 0;\n}",
+                options: ["10", "11", "Error", "Undefined"],
+                answer: "10"
+            },
+            {
+                question: "7. What is the output of the following code?\n\n#include <iostream>\n\nint main() {\n    int x = 10;\n    int *ptr = &x;\n    std::cout << ptr;\n    return 0;\n}",
+                options: ["10", "Address of x", "Error", "Undefined"],
+                answer: "Address of x"
+            },
+            {
+                question: "8. Which of the following is not a valid C++ data type?",
+                options: ["int", "float", "char", "byte"],
+                answer: "byte"
+            },
+            {
+                question: "9. What is the correct syntax for a do-while loop in C++?",
+                options: ["do { } while();", "do { } while(condition);", "do while(condition) { };", "while(condition) { } do;"],
+                answer: "do { } while(condition);"
+            },
+            {
+                question: "10. What is the output of the following code?\n\n#include <iostream>\n\nint main() {\n    int x = 5;\n    std::cout << ++x;\n    return 0;\n}",
+                options: ["5", "6", "Error", "Undefined"],
+                answer: "6"
+            },
+            {
+                question: "11. What is the output of the following code?\n\n#include <iostream>\n\nint main() {\n    int x = 5;\n    std::cout << x--;\n    return 0;\n}",
+                options: ["5", "6", "Error", "Undefined"],
+                answer: "5"
+            },
+            {
+                question: "12. What is the output of the following code?\n\n#include <iostream>\n\nint main() {\n    int x = 5;\n    int *ptr = &x;\n    std::cout << ptr;\n    return 0;\n}",
+                options: ["5", "Address of x", "Error", "Undefined"],
+                answer: "Address of x"
+            },
+            {
+                question: "13. What is the output of the following code?\n\n#include <iostream>\n\nint main() {\n    int x = 5;\n    int &ref = x;\n    std::cout << ref;\n    return 0;\n}",
+                options: ["5", "Address of x", "Error", "Undefined"],
+                answer: "5"
+            },
+            {
+                question: "14. Which operator is used to access the member functions and variables of a class?",
+                options: [".", "->", "*", "::"],
+                answer: "."
+            },
+            {
+                question: "15. What is the output of the following code?\n\n#include <iostream>\n\nint main() {\n    int x = 5;\n    int *ptr = &x;\n    std::cout << *ptr;\n    return 0;\n}",
+                options: ["5", "6", "Address of x", "Error"],
+                answer: "5"
+            },
+            {
+                question: "16. What is the output of the following code?\n\n#include <iostream>\n\nint main() {\n    int arr[] = {1, 2, 3, 4, 5};\n    std::cout << arr[0];\n    return 0;\n}",
+                options: ["0", "1", "Error", "Undefined"],
+                answer: "1"
+            },
+            {
+                question: "17. What is the output of the following code?\n\n#include <iostream>\n\nint main() {\n    int arr[] = {1, 2, 3, 4, 5};\n    std::cout << arr[5];\n    return 0;\n}",
+                options: ["5", "0", "Error", "Undefined"],
+                answer: "Undefined"
+            },
+            {
+                question: "18. What is the output of the following code?\n\n#include <iostream>\n\nint main() {\n    int arr[5];\n    std::cout << arr[0];\n    return 0;\n}",
+                options: ["0", "Error", "Undefined", "Garbage value"],
+                answer: "Garbage value"
+            },
+            {
+                question: "19. Which of the following correctly declares a reference to an integer in C++?",
+                options: ["int &ref = x;", "int ref = &x;", "int *ref = &x;", "int ref = x;"],
+                answer: "int &ref = x;"
+            },
+            {
+                question: "20. What is the output of the following code?\n\n#include <iostream>\n\nint main() {\n    int x = 5;\n    std::cout << x;\n    return 0;\n}",
+                options: ["5", "6", "Error", "Undefined"],
+                answer: "5"
+            },
+            {
+                question: "21. What is the output of the following code?\n\n#include <iostream>\n\nint main() {\n    int x = 5;\n    std::cout << &x;\n    return 0;\n}",
+                options: ["5", "Address of x", "Error", "Undefined"],
+                answer: "Address of x"
+            },
+            {
+                question: "22. What is the output of the following code?\n\n#include <iostream>\n\nint main() {\n    int x = 5;\n    int *ptr = &x;\n    std::cout << ptr;\n    return 0;\n}",
+                options: ["5", "Address of x", "Error", "Undefined"],
+                answer: "Address of x"
+            },
+            {
+                question: "23. What is the output of the following code?\n\n#include <iostream>\n\nint main() {\n    int arr[5];\n    std::cout << arr;\n    return 0;\n}",
+                options: ["Address of arr", "Error", "Undefined", "Garbage value"],
+                answer: "Address of arr"
+            },
+            {
+                question: "24. What is the output of the following code?\n\n#include <iostream>\n\nint main() {\n    int x = 5;\n    int &ref = x;\n    std::cout << ref;\n    return 0;\n}",
+                options: ["5", "Address of x", "Error", "Undefined"],
+                answer: "5"
+            },
+            {
+                question: "25. What is the output of the following code?\n\n#include <iostream>\n\nint main() {\n    int x = 5;\n    int *ptr = &x;\n    std::cout << *ptr;\n    return 0;\n}",
+                options: ["5", "6", "Address of x", "Error"],
+                answer: "5"
+            }
+        ];
+
+        let currentQuestionIndex = 0;
+        let score = 0;
+
+        function showQuestion(questionIndex) {
+            const currentQuestion = questions[questionIndex];
+            const quizElement = document.getElementById("quiz");
+            quizElement.innerHTML = `
+        <div class="question">
+            <p>${currentQuestion.question}</p>
+            <div class="options">
+                ${currentQuestion.options.map((option, index) => `
+                    <label><input type="radio" name="answer" value="${option}"> ${option}</label>
+                `).join('')}
+            </div>
+        </div>
+    `;
+        }
+
+        function showResult() {
+            const resultElement = document.getElementById("result");
+            resultElement.innerHTML = `Your score is: ${score}`;
+        }
+
+        function checkAnswer() {
+            const selectedAnswer = document.querySelector('input[name="answer"]:checked');
+            if (selectedAnswer) {
+                const userAnswer = selectedAnswer.value;
+                const correctAnswer = questions[currentQuestionIndex].answer;
+                if (userAnswer === correctAnswer) {
+                    score++;
+                }
+                currentQuestionIndex++;
+                if (currentQuestionIndex < questions.length) {
+                    showQuestion(currentQuestionIndex);
+                } else {
+                    showResult();
+                    document.getElementById("nextButton").disabled = true;
+                }
+            } else {
+                alert("Please select an answer.");
+            }
+        }
+
+        document.getElementById("nextButton").addEventListener("click", checkAnswer);
+
+        showQuestion(currentQuestionIndex);
+    </script>
+
+</body>
+
+</html>

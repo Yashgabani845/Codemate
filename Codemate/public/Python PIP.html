@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+        <link rel="stylesheet" href="../codemirror-5.65.16/lib/codemirror.css">
+        <script src="../codemirror-5.65.16/mode/python/python.js"></script>
+        <script src="../codemirror-5.65.16/lib/codemirror.js"></script>
+        <script src="../codemirror-5.65.16/mode/clike/clike.js"></script>
+        <link rel="stylesheet" href="../codemirror-5.65.16/theme/seti.css">
+        <script src="../codemirror-5.65.16/addon/edit/closebrackets.js"></script>
+        <link rel="icon" type="image/png" href="logo/fav.jpeg">
+    </head>
+    <body>
+        <div class="container" style=" height: fit-content;">
+        <h1 style="font-size: 42px; font-family: Segoe UI,Arial,sans-serif;font-weight: 400;">Python PIP</h1>
+        <div clas="desc" style="height: fit-content; width:fit-content;"><h2>What is PIP?</h2><p>PIP is a package manager for Python packages, or modules if you like.</p><p><strong>Note:</strong>&nbsp;If you have Python version 3.4 or later, PIP is included by default.</p><p><br></p><h2>What is a Package?</h2><p>A package contains all the files you need for a module.</p><p>Modules are Python code libraries you can include in your project.</p><p><br></p><h2>Check if PIP is Installed</h2><p>Navigate your command line to the location of Python's script directory, and type the following:</p><h3>Example</h3><h3><br></h3><p>Check PIP version:</p><p>C:\Users\<em>Your Name</em>\AppData\Local\Programs\Python\Python36-32\Scripts&gt;pip --version</p><p><br></p><h2>Install PIP</h2><p>If you do not have PIP installed, you can download and install it from this page:&nbsp;<a href="https://pypi.org/project/pip/" target="_blank" style="color: inherit; background-color: transparent;">https://pypi.org/project/pip/</a></p><p><br></p><h2>Download a Package</h2><p>Downloading a package is very easy.</p><p>Open the command line interface and tell PIP to download the package you want.</p><p>Navigate your command line to the location of Python's script directory, and type the following:</p><h3>Example</h3><p>Download a package named "camelcase":</p><p>C:\Users\<em>Your Name</em>\AppData\Local\Programs\Python\Python36-32\Scripts&gt;pip install camelcase</p><p>Now you have downloaded and installed your first package!</p><p><br></p><h2>Using a Package</h2><p>Once the package is installed, it is ready to use.</p><p>Import the "camelcase" package into your project.</p><h3>Example</h3><p>Import and use "camelcase":</p><p><span style="color: mediumblue;">import</span>&nbsp;camelcase</p><p><br></p><p>c = camelcase.CamelCase()</p><p><br></p><p>txt =&nbsp;<span style="color: brown;">"hello world"</span></p><p><br></p><p><span style="color: mediumblue;">print</span>(c.hump(txt))</p><p><br></p><h2>Find Packages</h2><p>Find more packages at&nbsp;<a href="https://pypi.org/" target="_blank" style="color: inherit; background-color: transparent;">https://pypi.org/</a>.</p><p><br></p><h2>Remove a Package</h2><p>Use the&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">uninstall</code>&nbsp;command to remove a package:</p><h3>Example</h3><p>Uninstall the package named "camelcase":</p><p>C:\Users\<em>Your Name</em>\AppData\Local\Programs\Python\Python36-32\Scripts&gt;pip uninstall camelcase</p><p>The PIP Package Manager will ask you to confirm that you want to remove the camelcase package:</p><p>Uninstalling camelcase-02.1:</p><p>&nbsp;Would remove:</p><p>&nbsp;&nbsp;&nbsp;c:\users\<em>Your Name</em>\appdata\local\programs\python\python36-32\lib\site-packages\camelcase-0.2-py3.6.egg-info</p><p>&nbsp;&nbsp;&nbsp;c:\users\<em>Your Name</em>\appdata\local\programs\python\python36-32\lib\site-packages\camelcase\*</p><p>Proceed (y/n)?</p><p>Press&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">y</code>&nbsp;and the package will be removed.</p><p><br></p><h2>List Packages</h2><p>Use the&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">list</code>&nbsp;command to list all the packages installed on your system:</p><h3>Example</h3><p>List installed packages:</p><p>C:\Users\<em>Your Name</em>\AppData\Local\Programs\Python\Python36-32\Scripts&gt;pip list</p><p>Result:</p><p>Package&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Version</p><p>-----------------------</p><p>camelcase&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.2</p><p>mysql-connector 2.1.6</p><p>pip&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;18.1</p><p>pymongo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.6.1</p><p>setuptools&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;39.0.1</p></div>
+        <div class="codesec">
+            <h1 style="font-size: 42px; font-family: Segoe UI,Arial,sans-serif;font-weight: 400;">Example</h1>
+    
+            <textarea type="text" id="editor" class="form-control" aria-label="First name">import camelcase
+
+c = camelcase.CamelCase()
+
+txt = "lorem ipsum dolor sit amet"
+
+print(c.hump(txt))
+
+#This method capitalizes the first letter of each word.
+</textarea>
+        </div>
+        <script>
+            var editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
+                mode: "text/x-c++src",
+                theme: "seti",
+                lineNumbers: true,
+                autoCloseBrackets: true,
+        
+            })
+            var width = window.innerWidth
+            editor.setSize(0.7 * width, "300")
+           
+        </script>
+        
+    </div>
+    </body>
+    </html>

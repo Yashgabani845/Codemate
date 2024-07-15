@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+        <link rel="stylesheet" href="../codemirror-5.65.16/lib/codemirror.css">
+        <script src="../codemirror-5.65.16/mode/python/python.js"></script>
+        <script src="../codemirror-5.65.16/lib/codemirror.js"></script>
+        <script src="../codemirror-5.65.16/mode/clike/clike.js"></script>
+        <link rel="stylesheet" href="../codemirror-5.65.16/theme/seti.css">
+        <script src="../codemirror-5.65.16/addon/edit/closebrackets.js"></script>
+        <link rel="icon" type="image/png" href="logo/fav.jpeg">
+    </head>
+    <body>
+        <div class="container" style=" height: fit-content;">
+        <h1 style="font-size: 42px; font-family: Segoe UI,Arial,sans-serif;font-weight: 400;">Python While Loops</h1>
+        <div clas="desc" style="height: fit-content; width:fit-content;"><h2>Python Loops</h2><p>Python has two primitive loop commands:</p><ul><li><span style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">while</span>&nbsp;loops</li><li><span style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">for</span>&nbsp;loops</li></ul><h2>The while Loop</h2><p>With the&nbsp;<span style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">while</span>&nbsp;loop we can execute a set of statements as long as a condition is true.</p><h3>Example</h3><h3><br></h3><p>Print i as long as i is less than 6:</p><p>i =&nbsp;<span style="color: red;">1</span></p><p><span style="color: mediumblue;">while</span>&nbsp;i &lt;&nbsp;<span style="color: red;">6</span>:</p><p>&nbsp;&nbsp;<span style="color: mediumblue;">print</span>(i)</p><p>&nbsp;&nbsp;i +=&nbsp;<span style="color: red;">1</span></p><p><br></p><p><strong>Note:</strong>&nbsp;remember to increment i, or else the loop will continue forever.</p><p>The&nbsp;<span style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">while</span>&nbsp;loop requires relevant variables to be ready, in this example we need to define an indexing variable,&nbsp;<span style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">i</span>, which we set to 1.</p><h2>The break Statement</h2><p>With the&nbsp;<span style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">break</span>&nbsp;statement we can stop the loop even if the while condition is true:</p><h3>Example</h3><p>Exit the loop when i is 3:</p><p>i =&nbsp;<span style="color: red;">1</span></p><p><span style="color: mediumblue;">while</span>&nbsp;i &lt;&nbsp;<span style="color: red;">6</span>:</p><p>&nbsp;&nbsp;<span style="color: mediumblue;">print</span>(i)</p><p>&nbsp;&nbsp;<span style="color: mediumblue;">if</span>&nbsp;i ==&nbsp;<span style="color: red;">3</span>:</p><p>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: mediumblue;">break</span></p><p>&nbsp;&nbsp;i +=&nbsp;<span style="color: red;">1</span></p><p><br></p><h2>The continue Statement</h2><p>With the&nbsp;<span style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">continue</span>&nbsp;statement we can stop the current iteration, and continue with the next:</p><h3>Example</h3><p>Continue to the next iteration if i is 3:</p><p>i =&nbsp;<span style="color: red;">0</span></p><p><span style="color: mediumblue;">while</span>&nbsp;i &lt;&nbsp;<span style="color: red;">6</span>:</p><p>&nbsp;&nbsp;i +=&nbsp;<span style="color: red;">1</span></p><p>&nbsp;&nbsp;<span style="color: mediumblue;">if</span>&nbsp;i ==&nbsp;<span style="color: red;">3</span>:</p><p>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: mediumblue;">continue</span></p><p>&nbsp;&nbsp;<span style="color: mediumblue;">print</span>(i)</p><p><br></p><h2>The else Statement</h2><p>With the&nbsp;<span style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">else</span>&nbsp;statement we can run a block of code once when the condition no longer is true:</p><h3>Example</h3><p>Print a message once the condition is false:</p><p>i =&nbsp;<span style="color: red;">1</span></p><p><span style="color: mediumblue;">while</span>&nbsp;i &lt;&nbsp;<span style="color: red;">6</span>:</p><p>&nbsp;&nbsp;<span style="color: mediumblue;">print</span>(i)</p><p>&nbsp;&nbsp;i +=&nbsp;<span style="color: red;">1</span></p><p><span style="color: mediumblue;">else</span>:</p><p>&nbsp;&nbsp;<span style="color: mediumblue;">print</span>(<span style="color: brown;">"i is no longer less than 6"</span>)</p><p><span style="color: rgb(255, 255, 255); background-color: rgb(76, 175, 80);"><span class="ql-cursor">﻿</span></span></p><p><br></p></div>
+        <div class="codesec">
+            <h1 style="font-size: 42px; font-family: Segoe UI,Arial,sans-serif;font-weight: 400;">Example</h1>
+    
+            <textarea type="text" id="editor" class="form-control" aria-label="First name"># Print i as long as i is less than 6:
+i = 1
+while i < 6:
+    print(i)
+    i += 1
+
+# Exit the loop when i is 3:
+i = 1
+while i < 6:
+    print(i)
+    if i == 3:
+        break
+    i += 1
+
+# Continue to the next iteration if i is 3:
+i = 0
+while i < 6:
+    i += 1
+    if i == 3:
+        continue
+    print(i)
+
+# Print a message once the condition is false:
+i = 1
+while i < 6:
+    print(i)
+    i += 1
+else:
+    print("i is no longer less than 6")
+</textarea>
+        </div>
+        <script>
+            var editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
+                mode: "text/x-c++src",
+                theme: "seti",
+                lineNumbers: true,
+                autoCloseBrackets: true,
+        
+            })
+            var width = window.innerWidth
+            editor.setSize(0.7 * width, "300")
+           
+        </script>
+        
+    </div>
+    </body>
+    </html>

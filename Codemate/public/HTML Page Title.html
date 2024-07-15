@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+        <link rel="stylesheet" href="../codemirror-5.65.16/lib/codemirror.css">
+        <script src="../codemirror-5.65.16/mode/python/python.js"></script>
+        <script src="../codemirror-5.65.16/lib/codemirror.js"></script>
+        <script src="../codemirror-5.65.16/mode/clike/clike.js"></script>
+        <link rel="stylesheet" href="../codemirror-5.65.16/theme/seti.css">
+        <script src="../codemirror-5.65.16/addon/edit/closebrackets.js"></script>
+        <link rel="icon" type="image/png" href="logo/fav.jpeg">
+    </head>
+    <body>
+        <div class="container" style=" height: fit-content;">
+        <h1 style="font-size: 42px; font-family: Segoe UI,Arial,sans-serif;font-weight: 400;">HTML Page Title</h1>
+        <div clas="desc" style="height: fit-content; width:fit-content;"><h1>HTML Page Title</h1><p><br></p><p><br></p><p>Every web page should have a page title to describe the meaning of the page.</p><p>The <code>&lt;title&gt;</code> element adds a title to your page:</p><p><br></p><h3>Example</h3><p><span style="color: mediumblue;">&lt;</span><span style="color: brown;">!DOCTYPE</span><span style="color: red;"> html</span><span style="color: mediumblue;">&gt;</span></p><p> <span style="color: mediumblue;">&lt;</span><span style="color: brown;">html</span><span style="color: mediumblue;">&gt;</span></p><p><span style="color: mediumblue;">&lt;</span><span style="color: brown;">head</span><span style="color: mediumblue;">&gt;</span></p><p>&nbsp;<span style="color: mediumblue;">&lt;</span><span style="color: brown;">title</span><span style="color: mediumblue;">&gt;</span>HTML Tutorial<span style="color: mediumblue;">&lt;</span><span style="color: brown;">/title</span><span style="color: mediumblue;">&gt;</span></p><p> <span style="color: mediumblue;">&lt;</span><span style="color: brown;">/head</span><span style="color: mediumblue;">&gt;</span></p><p> <span style="color: mediumblue;">&lt;</span><span style="color: brown;">body</span><span style="color: mediumblue;">&gt;</span></p><p> </p><p>The content of the document......</p><p> </p><p><span style="color: mediumblue;">&lt;</span><span style="color: brown;">/body</span><span style="color: mediumblue;">&gt;</span></p><p> <span style="color: mediumblue;">&lt;</span><span style="color: brown;">/html</span><span style="color: mediumblue;">&gt;</span></p><p>The title is shown in the browser's title bar:</p><p><img src="https://www.w3schools.com/html/pagetitle.jpg"> </p><p>The title should describe the content and the meaning of the page.</p><p>The page title is very important for search engine optimization (SEO). The text is used by search engine algorithms to decide the order when listing pages in search results.</p><p>The <code>&lt;title&gt;</code> element:</p><p><br></p><ul><li>defines a title in the browser toolbar</li><li>provides a title for the page when it is added to favorites</li><li>displays a title for the page in search engine-results</li></ul><p>So, try to make the title as accurate and meaningful as possible!</p></div>
+        <div class="codesec">
+            <h1 style="font-size: 42px; font-family: Segoe UI,Arial,sans-serif;font-weight: 400;">Example</h1>
+    
+            <textarea type="text" id="editor" class="form-control" aria-label="First name"><!DOCTYPE html>
+
+ <html>
+
+<head>
+
+ <title>HTML Tutorial</title>
+
+ </head>
+
+ <body>
+
+ 
+
+The content of the document......
+
+ 
+
+</body>
+
+ </html></textarea>
+        </div>
+        <script>
+            var editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
+                mode: "text/x-c++src",
+                theme: "seti",
+                lineNumbers: true,
+                autoCloseBrackets: true,
+        
+            })
+            var width = window.innerWidth
+            editor.setSize(0.7 * width, "300")
+           
+        </script>
+        
+    </div>
+    </body>
+    </html>

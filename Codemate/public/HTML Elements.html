@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+        <link rel="stylesheet" href="../codemirror-5.65.16/lib/codemirror.css">
+        <script src="../codemirror-5.65.16/mode/python/python.js"></script>
+        <script src="../codemirror-5.65.16/lib/codemirror.js"></script>
+        <script src="../codemirror-5.65.16/mode/clike/clike.js"></script>
+        <link rel="stylesheet" href="../codemirror-5.65.16/theme/seti.css">
+        <link rel="icon" type="image/png" href="logo/fav.jpeg">
+        <script src="../codemirror-5.65.16/addon/edit/closebrackets.js"></script>
+    </head>
+    <body>
+        <div class="container" style=" height: fit-content;">
+        <h1 style="font-size: 42px; font-family: Segoe UI,Arial,sans-serif;font-weight: 400;">HTML Elements</h1>
+        <div clas="desc" style="height: fit-content; width:fit-content;"><h1>HTML Elements</h1><p><br></p><p><br></p><p>An HTML element is defined by a start tag, some content, and an end tag.</p><p><br></p><h2>HTML Elements</h2><p>The HTML <strong>element</strong> is everything from the start tag to the end tag:</p><p>&lt;tagname&gt;Content goes here...&lt;/tagname&gt;</p><p>Examples of some HTML elements:</p><p><br></p><h3><strong>&lt;h1&gt;My First Heading&lt;/h1&gt;</strong></h3><p><br></p><h3><strong>&lt;p&gt;My first paragraph.&lt;/p&gt;</strong></h3><p><br></p><h2>Nested HTML Elements</h2><p>HTML elements can be nested (this means that elements can contain other elements).</p><p>All HTML documents consist of nested HTML elements.</p><p>The following example contains four HTML elements (<code>&lt;html&gt;</code>, <code>&lt;body&gt;</code>, <code>&lt;h1&gt;</code> and <code>&lt;p&gt;</code>):</p><p><br></p><h3>Example</h3><p><span style="color: mediumblue;">&lt;</span><span style="color: brown;">!DOCTYPE</span><span style="color: red;"> html</span><span style="color: mediumblue;">&gt;</span></p><p> <span style="color: mediumblue;">&lt;</span><span style="color: brown;">html</span><span style="color: mediumblue;">&gt;</span></p><p><span style="color: mediumblue;">&lt;</span><span style="color: brown;">body</span><span style="color: mediumblue;">&gt;</span></p><p><br></p><p> <span style="color: mediumblue;">&lt;</span><span style="color: brown;">h1</span><span style="color: mediumblue;">&gt;</span>My First Heading<span style="color: mediumblue;">&lt;</span><span style="color: brown;">/h1</span><span style="color: mediumblue;">&gt;</span></p><p><span style="color: mediumblue;">&lt;</span><span style="color: brown;">p</span><span style="color: mediumblue;">&gt;</span>My first paragraph.<span style="color: mediumblue;">&lt;</span><span style="color: brown;">/p</span><span style="color: mediumblue;">&gt;</span></p><p><br></p><p> <span style="color: mediumblue;">&lt;</span><span style="color: brown;">/body</span><span style="color: mediumblue;">&gt;</span></p><p><span style="color: mediumblue;">&lt;</span><span style="color: brown;">/html</span><span style="color: mediumblue;">&gt;</span></p></div>
+        <div class="codesec">
+            <h1 style="font-size: 42px; font-family: Segoe UI,Arial,sans-serif;font-weight: 400;">Example</h1>
+    
+            <textarea type="text" id="editor" class="form-control" aria-label="First name"><!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Heading</h1>
+<p>My first paragraph.</p>
+
+</body>
+</html>
+
+</textarea>
+        </div>
+        <script>
+            var editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
+                mode: "text/x-c++src",
+                theme: "seti",
+                lineNumbers: true,
+                autoCloseBrackets: true,
+        
+            })
+            var width = window.innerWidth
+            editor.setSize(0.7 * width, "300")
+           
+        </script>
+        
+    </div>
+    </body>
+    </html>

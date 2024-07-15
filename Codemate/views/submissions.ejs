@@ -1,0 +1,79 @@
+<!-- views/submissions.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submissions</title>
+</head>
+<style>
+  /* views/style.css */
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  div {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    color: #333;
+  }
+
+  p {
+    margin: 10px 0;
+  }
+
+  /* Optional: Add some additional styling to enhance the appearance */
+</style>
+
+<body>
+  <% submissions.forEach(submission=> { %>
+    <div>
+      <h2>
+        <%= submission.ptitle %>
+      </h2>
+      <p>
+        <%= submission.pstatement %>
+      </p>
+
+      <p>Problem: <%= submission.problem %>
+      </p>
+    </div>
+    <% }); %>
+
+      <center><button><a href="/">Home</a></button></center>
+      < <style>
+        a{
+        color: #ddd;
+        text-decoration: none;
+        }
+        button {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+        background-color: #45a049;
+        }
+        </style>
+</body>
+
+</html>

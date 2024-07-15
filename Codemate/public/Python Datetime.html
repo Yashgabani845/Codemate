@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+        <link rel="stylesheet" href="../codemirror-5.65.16/lib/codemirror.css">
+        <script src="../codemirror-5.65.16/mode/python/python.js"></script>
+        <script src="../codemirror-5.65.16/lib/codemirror.js"></script>
+        <script src="../codemirror-5.65.16/mode/clike/clike.js"></script>
+        <link rel="stylesheet" href="../codemirror-5.65.16/theme/seti.css">
+        <link rel="icon" type="image/png" href="logo/fav.jpeg">
+        <script src="../codemirror-5.65.16/addon/edit/closebrackets.js"></script>
+    </head>
+    <body>
+        <div class="container" style=" height: fit-content;">
+        <h1 style="font-size: 42px; font-family: Segoe UI,Arial,sans-serif;font-weight: 400;">Python Datetime</h1>
+        <div clas="desc" style="height: fit-content; width:fit-content;"><h2>Python Dates</h2><p><br></p><p>A date in Python is not a data type of its own, but we can import a module named&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">datetime</code>&nbsp;to work with dates as date objects.</p><h3>Example</h3><p>Import the datetime module and display the current date:</p><p><span style="color: mediumblue;">import</span>&nbsp;datetime</p><p><br></p><p>x = datetime.datetime.now()</p><p><span style="color: mediumblue;">print</span>(x)</p><p><br></p><h2>Date Output</h2><p>When we execute the code from the example above the result will be:</p><p><code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">2024-02-25 13:23:42.128108</code>The date contains year, month, day, hour, minute, second, and microsecond.</p><p>The&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">datetime</code>&nbsp;module has many methods to return information about the date object.</p><p>Here are a few examples, you will learn more about them later in this chapter:</p><h3>Example</h3><p>Return the year and name of weekday:</p><p><span style="color: mediumblue;">import</span>&nbsp;datetime</p><p><br></p><p>x = datetime.datetime.now()</p><p><br></p><p><span style="color: mediumblue;">print</span>(x.year)</p><p><span style="color: mediumblue;">print</span>(x.strftime(<span style="color: brown;">"%A"</span>))</p><p><br></p><h2>Creating Date Objects</h2><p>To create a date, we can use the&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">datetime()</code>&nbsp;class (constructor) of the&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">datetime</code>&nbsp;module.</p><p>The&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">datetime()</code>&nbsp;class requires three parameters to create a date: year, month, day.</p><h3>Example</h3><p>Create a date object:</p><p><span style="color: mediumblue;">import</span>&nbsp;datetime</p><p><br></p><p>x = datetime.datetime(<span style="color: red;">2020</span>,&nbsp;<span style="color: red;">5</span>,&nbsp;<span style="color: red;">17</span>)</p><p><br></p><p><span style="color: mediumblue;">print</span>(x)</p><p><br></p><p>The&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">datetime()</code>&nbsp;class also takes parameters for time and timezone (hour, minute, second, microsecond, tzone), but they are optional, and has a default value of&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">0</code>, (<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">None</code>&nbsp;for timezone).</p><h2>The strftime() Method</h2><p>The&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">datetime</code>&nbsp;object has a method for formatting date objects into readable strings.</p><p>The method is called&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">strftime()</code>, and takes one parameter,&nbsp;<code style="background-color: rgba(222, 222, 222, 0.3); color: crimson;">format</code>, to specify the format of the returned string:</p><h3>Example</h3><p>Display the name of the month:</p><p><span style="color: mediumblue;">import</span>&nbsp;datetime</p><p><br></p><p>x = datetime.datetime(<span style="color: red;">2018</span>,&nbsp;<span style="color: red;">6</span>,&nbsp;<span style="color: red;">1</span>)</p><p><br></p><p><span style="color: mediumblue;">print</span>(x.strftime(<span style="color: brown;">"%B"</span>))</p></div>
+        <div class="codesec">
+            <h1 style="font-size: 42px; font-family: Segoe UI,Arial,sans-serif;font-weight: 400;">Example</h1>
+    
+            <textarea type="text" id="editor" class="form-control" aria-label="First name">import datetime
+
+# Example: Displaying the current date
+x = datetime.datetime.now()
+print(x)
+
+# Example: Return the year and name of weekday
+print(x.year)
+print(x.strftime("%A"))
+
+# Example: Creating a date object
+x = datetime.datetime(2020, 5, 17)
+print(x)
+
+# Example: Using strftime() method to display the name of the month
+x = datetime.datetime(2018, 6, 1)
+print(x.strftime("%B"))
+</textarea>
+        </div>
+        <script>
+            var editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
+                mode: "text/x-c++src",
+                theme: "seti",
+                lineNumbers: true,
+                autoCloseBrackets: true,
+        
+            })
+            var width = window.innerWidth
+            editor.setSize(0.7 * width, "300")
+           
+        </script>
+        
+    </div>
+    </body>
+    </html>

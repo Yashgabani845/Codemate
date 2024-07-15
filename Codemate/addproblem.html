@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="logo/fav.jpeg">
+    <title>Add Problem</title>
+    <style>
+        body {
+            background-color: #b1abab;
+            color: #000000;
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            width: 50%;
+            margin: 50px auto;
+            text-align: left;
+            border: 2px solid #ddd;
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        textarea {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-top: 0px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            box-shadow: 0 1px 2px 0 rgb(0, 0, 0);
+            border-radius: 10px;
+            transition: 0.3s;
+            background-color: #f9f9f9;
+            color: #333;
+            outline: 0cm;
+        }
+
+        input[type="text"]:focus,
+        textarea:focus {
+            border: 0cm;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            box-sizing: border-box;
+            border: none;
+            background-color: rgb(64, 106, 107);
+            color: #fff;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #2f3030;
+        }
+
+        textarea {
+            height: 150px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Add Problem</h2>
+    <form action="/addproblem" method="POST">
+        <label for="pid">Problem ID:</label><br>
+        <input type="text" id="pid" name="pid"><br>
+        <label for="difficulty">Difficulty</label>
+        <select id="difficulty" name="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+        <label for="ptitle">Problem Title:</label><br>
+        <input type="text" id="ptitle" name="ptitle"><br>
+        <label for="pstatement">Problem Statement:</label><br>
+        <textarea id="pstatement" name="pstatement"></textarea><br>
+        <label for="input1">Input 1:</label><br>
+        <textarea id="input1" name="input1"></textarea><br>
+        <label for="output1">Output 1:</label><br>
+        <textarea id="output1" name="output1"></textarea><br>
+        <label for="input2">Input 2:</label><br>
+        <textarea id="input2" name="input2"></textarea><br>
+        <label for="output2">Output 2:</label><br>
+        <textarea id="output2" name="output2"></textarea><br><br>
+        <label for="solution">Solution:</label><br>
+        <textarea id="solution" name="solution"></textarea><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>

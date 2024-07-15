@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="logo/fav.jpeg">
+    <title>C Language Quiz</title>
+    <link rel="stylesheet" href="/css/quiz_style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>C Language Quiz</h1>
+        <div id="quiz"></div>
+        <button id="nextButton">Next Question</button>
+        <div id="result"></div>
+    </div>
+    <button><a href="/">Home</a></button>
+    <style>
+        a {
+            color: azure;
+            text-decoration: none;
+        }
+    </style>
+    <script>
+        const questions = [
+            {
+                question: "1. What is the syntax to declare a pointer in C?",
+                options: ["int *ptr;", "*int ptr;", "pointer ptr;", "ptr int;"],
+                answer: "int *ptr;"
+            },
+            {
+                question: "2. What is the output of the following code?\n\n#include <stdio.h>\n\nint main() {\n    int x = 5;\n    printf(\"%d\\n\", x++);\n    return 0;\n}",
+                options: ["5", "6", "Error", "Undefined"],
+                answer: "5"
+            },
+            {
+                question: "3. Which keyword is used to define a constant in C?",
+                options: ["constant", "const", "define", "static"],
+                answer: "const"
+            },
+            {
+                question: "4. What does the 'sizeof' operator return in C?",
+                options: ["Size of a variable", "Size of a data type", "Size of a function", "Size of a file"],
+                answer: "Size of a data type"
+            },
+            {
+                question: "5. What is the correct way to allocate memory dynamically in C?",
+                options: ["malloc()", "calloc()", "realloc()", "All of the above"],
+                answer: "All of the above"
+            },
+            {
+                question: "6. What is the output of the following code?\n\n#include <stdio.h>\n\nint main() {\n    int arr[] = {1, 2, 3, 4, 5};\n    printf(\"%d\\n\", arr[5]);\n    return 0;\n}",
+                options: ["0", "1", "Error", "Undefined"],
+                answer: "Undefined"
+            },
+            {
+                question: "7. Which of the following is not a valid C data type?",
+                options: ["float", "string", "double", "char"],
+                answer: "string"
+            },
+            {
+                question: "8. What is the output of the following code?\n\n#include <stdio.h>\n\nint main() {\n    int x = 5;\n    int *ptr = &x;\n    printf(\"%d\\n\", *ptr);\n    return 0;\n}",
+                options: ["5", "6", "Error", "Undefined"],
+                answer: "5"
+            },
+            {
+                question: "9. Which of the following is used to comment multiple lines in C?",
+                options: ["//", "/* */", "#", ";"],
+                answer: "/* */"
+            },
+            {
+                question: "10. What is the output of the following code?\n\n#include <stdio.h>\n\nint main() {\n    char str[] = 'Hello';\n    printf(\"%c\\n\", str[5]);\n    return 0;\n}",
+                options: ["l", "o", "Error", "Undefined"],
+                answer: "Error"
+            },
+            {
+                question: "11. What is the output of the following code?\n\n#include <stdio.h>\n\nint main() {\n    int x = 5;\n    printf(\"%d\\n\", x++);\n    return 0;\n}",
+                options: ["5", "6", "Error", "Undefined"],
+                answer: "5"
+            },
+            {
+                question: "12. What is the output of the following code?\n\n#include <stdio.h>\n\nint main() {\n    int x = 5;\n    int *ptr = &x;\n    printf(\"%d\\n\", *ptr);\n    return 0;\n}",
+                options: ["5", "6", "Error", "Undefined"],
+                answer: "5"
+            },
+            {
+                question: "13. What is the output of the following code?\n\n#include <stdio.h>\n\nint main() {\n    int arr[] = {1, 2, 3, 4, 5};\n    printf(\"%d\\n\", arr[5]);\n    return 0;\n}",
+                options: ["0", "1", "Error", "Undefined"],
+                answer: "Undefined"
+            },
+            {
+                question: "14. Which of the following is not a valid C data type?",
+                options: ["float", "string", "double", "char"],
+                answer: "string"
+            },
+            {
+                question: "15. Which keyword is used to define a constant in C?",
+                options: ["constant", "const", "define", "static"],
+                answer: "const"
+            },
+            {
+                question: "16. What does the 'sizeof' operator return in C?",
+                options: ["Size of a variable", "Size of a data type", "Size of a function", "Size of a file"],
+                answer: "Size of a data type"
+            },
+            {
+                question: "17. What is the correct way to allocate memory dynamically in C?",
+                options: ["malloc()", "calloc()", "realloc()", "All of the above"],
+                answer: "All of the above"
+            },
+            {
+                question: "18. What is the output of the following code?\n\n#include <stdio.h>\n\nint main() {\n    int arr[] = {1, 2, 3, 4, 5};\n    printf(\"%d\\n\", arr[5]);\n    return 0;\n}",
+                options: ["0", "1", "Error", "Undefined"],
+                answer: "Undefined"
+            },
+            {
+                question: "19. Which of the following is not a valid C data type?",
+                options: ["float", "string", "double", "char"],
+                answer: "string"
+            },
+            {
+                question: "20. What is the output of the following code?\n\n#include <stdio.h>\n\nint main() {\n    int x = 5;\n    printf(\"%d\\n\", x++);\n    return 0;\n}",
+                options: ["5", "6", "Error", "Undefined"],
+                answer: "5"
+            },
+            {
+                question: "21. What is the output of the following code?\n\n#include <stdio.h>\n\nint main() {\n    int x = 5;\n    int *ptr = &x;\n    printf(\"%d\\n\", *ptr);\n    return 0;\n}",
+                options: ["5", "6", "Error", "Undefined"],
+                answer: "5"
+            },
+            {
+                question: "22. What is the output of the following code?\n\n#include <stdio.h>\n\nint main() {\n    int arr[] = {1, 2, 3, 4, 5};\n    printf(\"%d\\n\", arr[5]);\n    return 0;\n}",
+                options: ["0", "1", "Error", "Undefined"],
+                answer: "Undefined"
+            },
+            {
+                question: "23. Which of the following is not a valid C data type?",
+                options: ["float", "string", "double", "char"],
+                answer: "string"
+            },
+            {
+                question: "24. What is the output of the following code?\n\n#include <stdio.h>\n\nint main() {\n    int x = 5;\n    printf(\"%d\\n\", x++);\n    return 0;\n}",
+                options: ["5", "6", "Error", "Undefined"],
+                answer: "5"
+            },
+            {
+                question: "25. What is the output of the following code?\n\n#include <stdio.h>\n\nint main() {\n    int x = 5;\n    int *ptr = &x;\n    printf(\"%d\\n\", *ptr);\n    return 0;\n}",
+                options: ["5", "6", "Error", "Undefined"],
+                answer: "5"
+            }
+        ];
+
+        let currentQuestionIndex = 0;
+        let score = 0;
+
+        function showQuestion(questionIndex) {
+            const currentQuestion = questions[questionIndex];
+            const quizElement = document.getElementById("quiz");
+            quizElement.innerHTML = `
+            <div class="question">
+                <p>${currentQuestion.question}</p>
+                <div class="options">
+                    ${currentQuestion.options.map((option, index) => `
+                        <label><input type="radio" name="answer" value="${option}"> ${option}</label>
+                    `).join('')}
+                </div>
+            </div>
+        `;
+        }
+
+        function showResult() {
+            const resultElement = document.getElementById("result");
+            resultElement.innerHTML = `Your score is: ${score}`;
+        }
+
+        function checkAnswer() {
+            const selectedAnswer = document.querySelector('input[name="answer"]:checked');
+            if (selectedAnswer) {
+                const userAnswer = selectedAnswer.value;
+                const correctAnswer = questions[currentQuestionIndex].answer;
+                if (userAnswer === correctAnswer) {
+                    score++;
+                }
+                currentQuestionIndex++;
+                if (currentQuestionIndex < questions.length) {
+                    showQuestion(currentQuestionIndex);
+                } else {
+                    showResult();
+                    document.getElementById("nextButton").disabled = true;
+                }
+            } else {
+                alert("Please select an answer.");
+            }
+        }
+
+        document.getElementById("nextButton").addEventListener("click", checkAnswer);
+
+        showQuestion(currentQuestionIndex);
+    </script>
+
+</body>
+
+</html>
