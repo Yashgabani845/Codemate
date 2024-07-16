@@ -1,0 +1,90 @@
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 65px;
+    background-color: #f8f9fa; 
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.logo {
+    height: 65px;
+    width: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.navlink {
+    margin-left: 0.3%;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.navlink:hover {
+    color: #007bff;
+    cursor: pointer; 
+}
+
+.down {
+    font-size: 13px;
+    margin-left: 1.5px;
+}
+
+.searchdiv {
+    position: relative; 
+    flex-grow: 1; 
+    margin-right: 20px;
+    max-width: 350px;
+}
+
+.search {
+    width: 100%;
+    border-radius: 15px;
+    border: 1px solid #ddd; 
+    outline: none;
+    height: 30px;
+    padding: 5px 10px 5px 35px; 
+    font-size: 16px;
+    background-color: #EBEDF0;
+    transition: border-color 0.3s; 
+}
+
+.search:focus {
+    border-color: #007bff; 
+}
+
+.searchicon {
+    position: absolute;
+    left: 10px;
+    top: 55%;
+    transform: translateY(-50%);
+    color: #929191;
+    font-size: 16px;
+    padding-right: 5px;
+    
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .logo {
+        margin: 10px 0;
+    }
+
+    .navlink {
+        margin: 10px 0;
+    }
+
+    .searchdiv {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
