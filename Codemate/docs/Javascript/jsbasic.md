@@ -37,7 +37,7 @@ JavaScript has several key features:
 ## Getting Started
 To start writing JavaScript, you can simply add a `<script>` tag to your HTML file. Here’s an example:
 
-```html
+```
 <!DOCTYPE html>
 <html>
 <head>
