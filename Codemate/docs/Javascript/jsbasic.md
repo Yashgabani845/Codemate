@@ -73,7 +73,7 @@ In JavaScript, you can declare variables using `var`, `let`, or `const`. JavaScr
 
 Example:
 
-```javascript
+```Javascript title="src/app/store.js"
 let age = 25; // Number
 let name = 'John'; // String
 let isStudent = true; // Boolean
