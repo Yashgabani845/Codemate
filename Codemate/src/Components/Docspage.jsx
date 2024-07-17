@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import Markdown from 'react-markdown'
-import remarkGfm from 'remark-gfm'
+import ReactMarkdown from 'react-markdown';
 import Sidebar from './Sidebar';
-
+import "../CSS/docspage.css"
 const DocsPage = () => {
   const { language, file } = useParams();
   const [content, setContent] = useState('');
@@ -36,12 +35,11 @@ const DocsPage = () => {
         {metadata && (
           <div className="metadata">
             <h1>{metadata.title}</h1>
-            <p>{metadata.description}</p>
-            <p>Hashtags:{metadata.hashtags}</p>
+            <p>{  metadata.description}</p>
+            <p>Hashtags: </p>
           </div>
         )}
-        <Markdown  remarkPlugins={[remarkGfm]}>{content}</Markdown>
-      </div>
+  <ReactMarkdown >{content}</ReactMarkdown>      </div>
     </div>
   );
 };

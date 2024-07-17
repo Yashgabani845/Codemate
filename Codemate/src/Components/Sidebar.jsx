@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-
+import "../CSS/docspage.css"
 const Sidebar = ({ language }) => {
   const [languages, setLanguages] = useState([]);
   const [files, setFiles] = useState([]);
