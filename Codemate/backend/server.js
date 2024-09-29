@@ -3,33 +3,45 @@ const cors = require('cors');
 const fs = require('fs');
 const path = require('path');
 const matter = require('gray-matter');
+const MarkdownIt = require('markdown-it');
+
 const app = express();
 app.use(cors());
 
 const docsDir = path.join(__dirname, 'docs');
 
 app.get('/api/docs/:language/:file', (req, res) => {
-  console.log("simple called");
-
   const { language, file } = req.params;
   const filePath = path.join(docsDir, language, file);
-
-  console.log('Attempting to read file at:', filePath); // Debugging log
-
+  
   fs.readFile(filePath, 'utf8', (err, content) => {
-    if (err) {
-      console.error('Error reading file:', err); 
-      return res.status(500).json({ error: 'Failed to load file' });
-    }
-    const { data, content: markdownContent } = matter(content);
-    const htmlContent = markdownContent;
-    res.json({ data, content: htmlContent });
+      if (err) return res.status(500).json({ error: 'Failed to load file' });
+      
+      const { data, content: markdownContent } = matter(content);
+
+      const md = new MarkdownIt();
+      const tokens = md.parse(markdownContent, {});
+
+     
+const summary = markdownContent.split('\n')
+.filter(line => line.trim().startsWith('#'))  
+.map(line => {
+    const headingLevel = line.match(/^#+/)[0].length; 
+    const title = line.replace(/^#+\s*/, ''); 
+    return {
+        level: `h${headingLevel}`, 
+        title: title.trim() 
+    };
+});
+
+
+res.json({ data, content: markdownContent, summary });
   });
 });
 
 app.get('/api/docs/:language', (req, res) => {
   const { language } = req.params;
-  const languageDir = path.join(docsDir,language);
+  const languageDir = path.join(docsDir, language);
 
   console.log('Attempting to read directory:', docsDir); 
 
@@ -38,9 +50,9 @@ app.get('/api/docs/:language', (req, res) => {
       console.error('Error reading directory:', err); 
       return res.status(500).json({ error: 'Failed to read directory' });
     }
-console.log(files)
+    
     const markdownFiles = files.filter(file => path.extname(file) === '.md');
-console.log(markdownFiles)
+    console.log(markdownFiles);
     res.json({ files: markdownFiles });
   });
 });

@@ -1,18 +1,9 @@
-.docs-page {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    font-family: 'Arial', sans-serif;
-  }
+
   
   .docs-content {
     width: 100%;
+    padding: 20px;
     background-color: #f9f9f9;
-    padding: 40px;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
@@ -88,4 +79,49 @@
       font-size: 26px;
     }
   }
-  
+  /* General markdown content styles */
+.docs-content {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.metadata h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.metadata p {
+  margin-bottom: 5px;
+}
+
+.code-block {
+  position: relative;
+  margin-bottom: 20px;
+  background-color:wheat ;
+
+}
+
+.copy-btn {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  background-color: #ff79c6;
+  color: #282a36;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background-color 0.3s ease;
+}
+
+.copy-btn:hover {
+  background-color: #f8f8f2;
+}
+
+pre {
+  border-radius: 5px;
+  background-color: #2d2d2d;
+  padding: 12px;
+  color: #f8f8f2;
+}

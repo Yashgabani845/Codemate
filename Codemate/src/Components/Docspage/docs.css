@@ -10,22 +10,20 @@ body {
 }
 
 .sidebar {
-    width: 21   0px;
+    width: 210px;
     background-color: white; 
     padding: 20px;
     position: absolute;
-    top: 100;
- 
+    top: 100px; /* Fixed this for proper positioning */
     overflow-y: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    border-radius: 8px;
     background: rgba(255, 255, 255, 0.85); 
 }
 
 .sidebar h2 {
     font-size: 18px;
     margin-bottom: 20px;
-    color: #2d3748; /* Darker color for text contrast */
+    color: #2d3748; 
 }
 
 .sidebar ul {
@@ -52,11 +50,10 @@ body {
     transform: translateX(5px); /* Subtle hover movement */
 }
 
-/* Main content styling */
 .main-content {
     margin-left: 250px; /* Same as sidebar width */
-    flex-grow: 1;
-    padding: 20px;
+    max-width: 60%;
+    text-align: left;
     background-color: #fff;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px; /* Rounded corners for the main content */
@@ -71,7 +68,35 @@ body {
     line-height: 1.6;
 }
 
-/* Responsive adjustments */
+/* Summary component styling */
+.summary {
+    width: 300px; /* Fixed width for summary */
+    padding: 20px;
+    text-align: left;
+
+    background-color: rgba(255, 255, 255, 0.9); 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    margin-left: 20px; 
+}
+
+.summary h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #2d3748;
+}
+
+.summary ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.summary ul li {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #4a5568; 
+}
+
 @media (max-width: 768px) {
     .sidebar {
         width: 200px;
@@ -79,6 +104,10 @@ body {
 
     .main-content {
         margin-left: 200px;
+    }
+
+    .summary {
+        width: 250px; /* Adjust width for smaller screens */
     }
 }
 
@@ -91,6 +120,11 @@ body {
     }
 
     .main-content {
+        margin-left: 0;
+    }
+
+    .summary {
+        width: 100%; 
         margin-left: 0;
     }
 }
