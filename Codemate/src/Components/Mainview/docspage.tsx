@@ -36,7 +36,6 @@ const DocsPage: React.FC = () => {
   }, [language, file]);
 
   return (
-    <div className="docs-page">
       <div className="docs-content">
         {metadata && (
           <div className="metadata">
@@ -47,7 +46,6 @@ const DocsPage: React.FC = () => {
         )}
         <Markdown remarkPlugins={[remarkGfm]}>{content}</Markdown>
       </div>
-    </div>
   );
 };
 

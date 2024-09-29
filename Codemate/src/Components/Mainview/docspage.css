@@ -1,18 +1,9 @@
-.docs-page {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    font-family: 'Arial', sans-serif;
-  }
+
   
   .docs-content {
     width: 100%;
+    padding: 20px;
     background-color: #f9f9f9;
-    padding: 40px;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
