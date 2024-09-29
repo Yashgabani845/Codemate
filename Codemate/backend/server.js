@@ -22,15 +22,20 @@ app.get('/api/docs/:language/:file', (req, res) => {
       const md = new MarkdownIt();
       const tokens = md.parse(markdownContent, {});
 
-      // Filter tokens to include only h1 and h2
-      const summary = tokens
-          .filter(token => token.type === 'heading_open' && (token.tag === 'h1' || token.tag === 'h2'))
-          .map((token, idx) => ({
-              level: token.tag,
-              title: tokens[idx + 1].content // The content follows the heading token
-          }));
+     
+const summary = markdownContent.split('\n')
+.filter(line => line.trim().startsWith('#'))  
+.map(line => {
+    const headingLevel = line.match(/^#+/)[0].length; 
+    const title = line.replace(/^#+\s*/, ''); 
+    return {
+        level: `h${headingLevel}`, 
+        title: title.trim() 
+    };
+});
 
-      res.json({ data, content: markdownContent, summary });
+
+res.json({ data, content: markdownContent, summary });
   });
 });
 
