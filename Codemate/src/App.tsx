@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import DocsPage from './Components/Mainview/docspage';
+import { Docs } from './Components/Docspage/docspage';
 import Navbar from './Components/Navbar/Navbar';
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
       
      <Router>
       <Routes>
-        <Route path="/:language/:file" element={<DocsPage />} />
+        <Route path="/:language/:file" element={<Docs/>} />
      
       </Routes>
     </Router>
