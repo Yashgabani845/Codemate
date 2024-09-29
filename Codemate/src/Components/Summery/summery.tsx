@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-
+import ReactMarkdown from 'react-markdown'; 
+import "./summery.css"
 interface SummaryItem {
-  level: string;
+  level: string; 
   title: string;
 }
 
@@ -23,7 +24,7 @@ const Summary: React.FC<SummaryProps> = ({ language, file }) => {
         }
         const data = await response.json();
         setSummary(data.summary);
-      } catch (err : any) {
+      } catch (err: any) {
         setError(err.message);
       }
     };
@@ -40,8 +41,11 @@ const Summary: React.FC<SummaryProps> = ({ language, file }) => {
       <h2>Summary</h2>
       <ul>
         {summary.map((item, index) => (
-          <li key={index} style={{ paddingLeft: `${(parseInt(item.level[1]) - 1) * 10}px` }}>
-            {item.title}
+          <li 
+            key={index} 
+            className={`level-${item.level}`}  
+          >
+            <ReactMarkdown>{`${'#'.repeat(parseInt(item.level[1]))} ${item.title}`}</ReactMarkdown>
           </li>
         ))}
       </ul>
